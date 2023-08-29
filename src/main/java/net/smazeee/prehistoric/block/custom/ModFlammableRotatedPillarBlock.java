@@ -2,9 +2,17 @@ package net.smazeee.prehistoric.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ToolAction;
+import net.smazeee.prehistoric.block.ModBlocks;
+
+import javax.annotation.Nullable;
 
 public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
 
@@ -27,21 +35,21 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
         return 5;
     }
 
-    /*@Nullable
+    @Nullable
     @Override
+    @Deprecated
     public BlockState getToolModifiedState(BlockState state, Level world, BlockPos pos, Player player,
                                            ItemStack stack, ToolAction toolAction) {
         if(stack.getItem() instanceof AxeItem) {
             if(state.is(ModBlocks.ARCHAEOPTERIS_LOG.get())) {
-                return ModBlocks.STRIPPED_EBONY_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+                return ModBlocks.STRIPPED_ARCHAEOPTERIS_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.EBONY_WOOD.get())) {
-                return ModBlocks.STRIPPED_EBONY_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(ModBlocks.ARCHAEOPTERIS_WOOD.get())) {
+                return ModBlocks.STRIPPED_ARCHAEOPTERIS_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
 
         return super.getToolModifiedState(state, world, pos, player, stack, toolAction);
     }
 
-     */
 }

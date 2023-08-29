@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "prehistoric:block/stripped_archaeopteris_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "prehistoric:block/stripped_archaeopteris_log"
+    },
+    "axis=z": {
+      "model": "prehistoric:block/stripped_archaeopteris_log",
+      "x": 90
+    }
+  }
+}

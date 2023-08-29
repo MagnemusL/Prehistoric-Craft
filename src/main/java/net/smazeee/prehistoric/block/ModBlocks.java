@@ -3,12 +3,10 @@ package net.smazeee.prehistoric.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.block.custom.ModFlammableRotatedPillarBlock;
+import net.smazeee.prehistoric.block.custom.BrasilodendronPlant;
 import net.smazeee.prehistoric.item.ModItems;
 import net.smazeee.prehistoric.world.feature.tree.ArchaeopterisTreeGrower;
 
@@ -27,6 +26,15 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricCraft.MOD_ID);
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_LOG = registerBlock("archaeopteris_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_WOOD = registerBlock("archaeopteris_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_ARCHAEOPTERIS_WOOD = registerBlock("stripped_archaeopteris_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_ARCHAEOPTERIS_LOG = registerBlock("stripped_archaeopteris_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_LEAVES = registerBlock("archaeopteris_leaves",
@@ -49,6 +57,21 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_SAPLING = registerBlock("archaeopteris_sapling",
             () -> new SaplingBlock(new ArchaeopterisTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> BRASILODENDRON_BOTTOM = registerBlock("brasilodendron_bottom",
+            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> BRASILODENDRON_MIDDLE = registerBlock("brasilodendron_middle",
+            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> BRASILODENDRON_TOP = registerBlock("brasilodendron_top",
+            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> BELEMNOPTERIS = registerBlock("belemnopteris",
+            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = BLOCKS.register("archaeopteris_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_PLANKS = registerBlock("archaeopteris_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
@@ -75,7 +98,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     }
 
     public static void register(IEventBus eventBus) {
