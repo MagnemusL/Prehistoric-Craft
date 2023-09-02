@@ -15,8 +15,10 @@
   "biomes": "#prehistoric:has_structure/archaeopteris_tree_variant_1_biomes",
 
   // If true, land will be add around the bottom of the structure. (Based on the starting piece's y value)
-  "adapt_noise": true
+  "adapt_noise": true,
 
   // What mobs can spawn over time in the structure.
   // Make sure you add the mob to the right category (monster, creature, etc)
+  "spawn_overrides": {
+  }
 }

@@ -15,9 +15,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.block.custom.ModFlammableRotatedPillarBlock;
-import net.smazeee.prehistoric.block.custom.BrasilodendronPlant;
+import net.smazeee.prehistoric.block.custom.TriplePlantBlock;
 import net.smazeee.prehistoric.item.ModItems;
-import net.smazeee.prehistoric.world.feature.tree.ArchaeopterisTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -29,13 +28,29 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_WOOD = registerBlock("archaeopteris_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_ARCHAEOPTERIS_WOOD = registerBlock("stripped_archaeopteris_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
     public static final RegistryObject<Block> STRIPPED_ARCHAEOPTERIS_LOG = registerBlock("stripped_archaeopteris_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_STAIRS = registerBlock("archaeopteris_stairs",
+            () -> new StairBlock(() -> ModBlocks.ARCHAEOPTERIS_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_SLAB = registerBlock("archaeopteris_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_FENCE = registerBlock("archaeopteris_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_FENCE_GATE = registerBlock("archaeopteris_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_WALLS = registerBlock("archaeopteris_walls",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_LEAVES = registerBlock("archaeopteris_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
@@ -55,22 +70,22 @@ public class ModBlocks {
                 }
             });
 
-    public static final RegistryObject<Block> ARCHAEOPTERIS_SAPLING = registerBlock("archaeopteris_sapling",
-            () -> new SaplingBlock(new ArchaeopterisTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    //public static final RegistryObject<Block> ARCHAEOPTERIS_SAPLING = registerBlock("archaeopteris_sapling",
+    //      () -> new SaplingBlock(new ArchaeopterisTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> BRASILODENDRON_BOTTOM = registerBlock("brasilodendron_bottom",
-            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> BRASILODENDRON_MIDDLE = registerBlock("brasilodendron_middle",
-            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> BRASILODENDRON_TOP = registerBlock("brasilodendron_top",
-            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> BELEMNOPTERIS = registerBlock("belemnopteris",
-            () -> new BrasilodendronPlant(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
-    public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = BLOCKS.register("archaeopteris_door",
+    public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = registerBlock("archaeopteris_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_PLANKS = registerBlock("archaeopteris_planks",

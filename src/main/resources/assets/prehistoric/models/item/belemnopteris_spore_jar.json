@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "prehistoric:item/belemnopteris_spore_jar"
+  }
+}

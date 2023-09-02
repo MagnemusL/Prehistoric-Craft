@@ -75,31 +75,31 @@ public class TriplePlantBlock extends BushBlock {
             return p_182456_.hasProperty(BlockStateProperties.WATERLOGGED) ? p_182456_.setValue(BlockStateProperties.WATERLOGGED, Boolean.valueOf(p_182454_.isWaterAt(p_182455_))) : p_182456_;
         }
 
-        public void playerWillDestroy(Level p_52878_, BlockPos p_52879_, BlockState p_52880_, Player p_52881_) {
-            if (!p_52878_.isClientSide) {
-                if (p_52881_.isCreative()) {
-                    preventCreativeDropFromBottomPart(p_52878_, p_52879_, p_52880_, p_52881_);
+        public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+            if (!level.isClientSide) {
+                if (player.isCreative()) {
+                    preventCreativeDropFromBottomPart(level, pos, state, player);
                 } else {
-                    dropResources(p_52880_, p_52878_, p_52879_, (BlockEntity)null, p_52881_, p_52881_.getMainHandItem());
+                    dropResources(state, level, pos, (BlockEntity)null, player, player.getMainHandItem());
                 }
             }
 
-            super.playerWillDestroy(p_52878_, p_52879_, p_52880_, p_52881_);
+            super.playerWillDestroy(level, pos, state, player);
         }
 
         public void playerDestroy(Level p_52865_, Player p_52866_, BlockPos p_52867_, BlockState p_52868_, @Nullable BlockEntity p_52869_, ItemStack p_52870_) {
             super.playerDestroy(p_52865_, p_52866_, p_52867_, Blocks.AIR.defaultBlockState(), p_52869_, p_52870_);
         }
 
-        protected static void preventCreativeDropFromBottomPart(Level p_52904_, BlockPos p_52905_, BlockState p_52906_, Player p_52907_) {
-            TripleBlockHalf doubleblockhalf = p_52906_.getValue(HALF);
+        protected static void preventCreativeDropFromBottomPart(Level level, BlockPos pos, BlockState state, Player player) {
+            TripleBlockHalf doubleblockhalf = state.getValue(HALF);
             if (doubleblockhalf == TripleBlockHalf.UPPER) {
-                BlockPos blockpos = p_52905_.below();
-                BlockState blockstate = p_52904_.getBlockState(blockpos);
-                if (blockstate.is(p_52906_.getBlock()) && blockstate.getValue(HALF) == TripleBlockHalf.LOWER) {
+                BlockPos blockpos = pos.below();
+                BlockState blockstate = level.getBlockState(blockpos);
+                if (blockstate.is(state.getBlock()) && blockstate.getValue(HALF) == TripleBlockHalf.LOWER) {
                     BlockState blockstate1 = blockstate.hasProperty(BlockStateProperties.WATERLOGGED) && blockstate.getValue(BlockStateProperties.WATERLOGGED) ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState();
-                    p_52904_.setBlock(blockpos, blockstate1, 35);
-                    p_52904_.levelEvent(p_52907_, 2001, blockpos, Block.getId(blockstate));
+                    level.setBlock(blockpos, blockstate1, 35);
+                    level.levelEvent(player, 2001, blockpos, Block.getId(blockstate));
                 }
             }
 

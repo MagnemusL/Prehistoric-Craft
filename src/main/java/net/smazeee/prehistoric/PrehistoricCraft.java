@@ -15,6 +15,7 @@ import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.blockstates.ModBlockStateProperties;
 import net.smazeee.prehistoric.fluids.ModFluids;
 import net.smazeee.prehistoric.item.ModItems;
+import net.smazeee.prehistoric.painting.ModPaintings;
 import net.smazeee.prehistoric.world.structures.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,6 +35,8 @@ public class PrehistoricCraft {
         ModBlocks.register(modEventBus);
         ModFluids.register(modEventBus);
 
+        ModPaintings.register(modEventBus);
+
         ModBlockStateProperties.register(modEventBus);
 
         modEventBus.addListener(this::setup);
@@ -43,7 +46,7 @@ public class PrehistoricCraft {
 
     private void setup(final FMLCommonSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_SAPLING.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_DOOR.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BELEMNOPTERIS.get(), RenderType.cutout());

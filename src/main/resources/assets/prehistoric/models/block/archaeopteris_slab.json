@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "prehistoric:block/archaeopteris_block",
+    "top": "prehistoric:block/archaeopteris_block",
+    "side": "prehistoric:block/archaeopteris_block"
+  }
+}

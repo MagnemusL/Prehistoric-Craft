@@ -7,11 +7,18 @@
   "block.prehistoric.stripped_archaeopteris_log": "Stripped Archaeopteris Log",
   "block.prehistoric.archaeopteris_leaves": "Archaeopteris Leaves",
   "block.prehistoric.archaeopteris_sapling": "Archaeopteris Sapling",
-  "block.prehistoric.belemnopteris": "Belemnopteris",
+  "block.prehistoric.archaeopteris_stairs": "Archaeopteris Stairs",
+  "block.prehistoric.archaeopteris_slab": "Archaeopteris Slab",
+  "block.prehistoric.archaeopteris_fence": "Archaeopteris Fence",
+  "block.prehistoric.archaeopteris_fence_gate": "Archaeopteris Fence Gate",
+  "block.prehistoric.archaeopteris_wall": "Archaeopteris Wall",
 
+  "block.prehistoric.belemnopteris": "Belemnopteris",
   "block.prehistoric.brasilodendron_bottom": "Brasilodendron Bottom",
   "block.prehistoric.brasilodendron_middle": "Brasilodendron Middle",
   "block.prehistoric.brasilodendron_top": "Brasilodendron Top",
 
-  "item.prehistoric.mud_water_bucket": "Mud Water Bucket"
+  "item.prehistoric.mud_water_bucket": "Mud Water Bucket",
+  "item.prehistoric.empty_jar": "Empty Jar",
+  "item.prehistoric.belemnopteris_spore_jar": "Belemnopteris Spore Jar"
 }

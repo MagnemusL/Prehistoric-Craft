@@ -11,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.fluids.ModFluids;
+import net.smazeee.prehistoric.item.custom.JarItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -20,8 +21,14 @@ public class ModItems {
             () -> new BucketItem(ModFluids.MUD_WATER_FLUID,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1)));
 
-    public static final RegistryObject<Item> ARCHAEOPTERIS_DOOR = ITEMS.register("archaeopteris_door",
-            () -> new BlockItem(ModBlocks.ARCHAEOPTERIS_DOOR.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> PC_PICTURE = ITEMS.register("pc_picture",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> EMPTY_JAR = ITEMS.register("empty_jar",
+            () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> BELEMOPTERIS_SPORE_JAR = ITEMS.register("belemnopteris_spore_jar",
+            () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
