@@ -15,11 +15,15 @@ import net.minecraft.world.level.block.Blocks;
 import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.item.ModItems;
 
+import java.util.Random;
+
 public class JarItem extends Item {
 
     public JarItem(Properties properties) {
         super(properties);
     }
+
+    Random random = new Random();
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
@@ -28,6 +32,9 @@ public class JarItem extends Item {
         Level level = player.getLevel();
         if (this == ModItems.EMPTY_JAR.get()) {
             if (level.getBlockState(pos).is(ModBlocks.BELEMNOPTERIS.get())) {
+                if(random.nextBoolean()) {
+                    level.removeBlock(pos, false);
+                }
                 player.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(Blocks.AIR));
                 player.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(ModItems.BELEMOPTERIS_SPORE_JAR.get()));
                 return InteractionResult.SUCCESS;

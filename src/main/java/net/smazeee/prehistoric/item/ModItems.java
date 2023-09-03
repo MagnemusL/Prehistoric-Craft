@@ -1,6 +1,5 @@
 package net.smazeee.prehistoric.item;
 
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -9,9 +8,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
-import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.fluids.ModFluids;
 import net.smazeee.prehistoric.item.custom.JarItem;
+import net.smazeee.prehistoric.item.custom.MachineCore;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -29,6 +28,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> BELEMOPTERIS_SPORE_JAR = ITEMS.register("belemnopteris_spore_jar",
             () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> UNCHARGED_MACHINE_CORE = ITEMS.register("uncharged_machine_core",
+            () -> new MachineCore(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> CHARGED_MACHINE_CORE = ITEMS.register("charged_machine_core",
+            () -> new MachineCore(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
