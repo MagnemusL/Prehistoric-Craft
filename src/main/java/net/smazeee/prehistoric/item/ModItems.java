@@ -20,6 +20,13 @@ public class ModItems {
             () -> new BucketItem(ModFluids.MUD_WATER_FLUID,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1)));
 
+    public static final RegistryObject<Item> ACID_BUCKET = ITEMS.register("acid_bucket",
+            () -> new BucketItem(ModFluids.ACID_FLUID,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1)));
+
+    public static final RegistryObject<Item> SULFUR = ITEMS.register("sulfur",
+            () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
     public static final RegistryObject<Item> PC_PICTURE = ITEMS.register("pc_picture",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
@@ -30,10 +37,10 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> UNCHARGED_MACHINE_CORE = ITEMS.register("uncharged_machine_core",
-            () -> new MachineCore(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new MachineCore(new Item.Properties().tab(CreativeModeTab.TAB_MISC).defaultDurability(0)));
 
     public static final RegistryObject<Item> CHARGED_MACHINE_CORE = ITEMS.register("charged_machine_core",
-            () -> new MachineCore(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new MachineCore(new Item.Properties().tab(CreativeModeTab.TAB_MISC).defaultDurability(1000)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

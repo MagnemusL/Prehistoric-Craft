@@ -9,13 +9,14 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.block.custom.ModFlammableRotatedPillarBlock;
-import net.smazeee.prehistoric.block.custom.TriplePlantBlock;
+import net.smazeee.prehistoric.block.custom.machines.AcidShowerBlock;
 import net.smazeee.prehistoric.item.ModItems;
 
 import java.util.function.Supplier;
@@ -51,6 +52,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_WALLS = registerBlock("archaeopteris_walls",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_TRAPDOOR = registerBlock("archaeopteris_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_LEAVES = registerBlock("archaeopteris_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
@@ -123,6 +127,44 @@ public class ModBlocks {
                     return 5;
                 }
             } );
+
+    public static final RegistryObject<Block> ACID_SHOWER = registerBlock("acid_shower",
+            () -> new AcidShowerBlock(BlockBehaviour.Properties.of(Material.METAL)));
+
+    public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
+
+    private static <T extends Block> RegistryObject<T> registerOre(String name, Supplier<T> block) {
+            registerBlock(name,
+                    () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(2f)
+                            .explosionResistance(1f)
+                            .requiresCorrectToolForDrops()));
+        return null;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerOreDeepslate(String name, Supplier<T> block) {
+        registerBlock(name,
+                () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(2f)
+                        .explosionResistance(1f)
+                        .requiresCorrectToolForDrops()));
+        registerBlock("deepslate_" + name,
+                () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(2f)
+                        .explosionResistance(1f)
+                        .requiresCorrectToolForDrops()));
+        return null;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerDeepslate(String name, Supplier<T> block) {
+        registerBlock("deepslate_" + name,
+                () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(2f)
+                        .explosionResistance(1f)
+                        .requiresCorrectToolForDrops()));
+        return null;
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

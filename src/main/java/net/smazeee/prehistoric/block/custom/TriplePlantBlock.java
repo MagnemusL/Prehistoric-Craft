@@ -46,6 +46,7 @@ public class TriplePlantBlock extends BushBlock {
         public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
             BlockPos blockpos = placeContext.getClickedPos();
             Level level = placeContext.getLevel();
+            Player player = placeContext.getPlayer();
             return blockpos.getY() < level.getMaxBuildHeight() - 1 && level.getBlockState(blockpos.above()).canBeReplaced(placeContext) ? super.getStateForPlacement(placeContext) : null;
         }
 
