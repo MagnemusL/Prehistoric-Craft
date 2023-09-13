@@ -18,11 +18,16 @@
   "block.prehistoric.brasilodendron_bottom": "Brasilodendron Bottom",
   "block.prehistoric.brasilodendron_middle": "Brasilodendron Middle",
   "block.prehistoric.brasilodendron_top": "Brasilodendron Top",
+  "block.prehistoric.baiera": "Baiera",
   "block.prehistoric.anomozamites_shoot": "Anomozamites Shoot",
   "block.prehistoric.acid_shower": "Acid Shower",
   "block.prehistoric.limestone": "Limestone",
+  "block.prehistoric.limestone_bricks": "Limestone Bricks",
 
-  "item.prehistoric.acid_bucket": "Sulfuric Acid",
+  "block.prehistoric.conifer_dirt": "Conifer Dirt",
+  "block.prehistoric.conifer_bedding": "Conifer Bedding",
+
+  "item.prehistoric.acid_bucket": "Sulfuric Acid Bucket",
   "item.prehistoric.sulfur": "Sulfur",
 
   "item.prehistoric.mud_water_bucket": "Mud Water Bucket",

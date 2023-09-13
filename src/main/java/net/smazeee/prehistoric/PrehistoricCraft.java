@@ -14,7 +14,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.block.entity.ModBlockEntities;
-import net.smazeee.prehistoric.blockstates.ModBlockStateProperties;
 import net.smazeee.prehistoric.fluids.ModFluids;
 import net.smazeee.prehistoric.item.ModItems;
 import net.smazeee.prehistoric.painting.ModPaintings;
@@ -43,7 +42,7 @@ public class PrehistoricCraft {
 
         ModPaintings.register(modEventBus);
 
-        ModBlockStateProperties.register(modEventBus);
+        //ModBlockStateProperties.register(modEventBus);
 
         modEventBus.addListener(this::setup);
 
@@ -60,6 +59,7 @@ public class PrehistoricCraft {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_BOTTOM.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_MIDDLE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_TOP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BAIERA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModFluids.MUD_WATER_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.MUD_WATER_FLUID.get(), RenderType.translucent());

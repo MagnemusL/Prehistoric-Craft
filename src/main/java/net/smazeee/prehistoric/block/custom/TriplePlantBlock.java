@@ -18,14 +18,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.smazeee.prehistoric.blockstates.ModBlockStateProperties;
 import net.smazeee.prehistoric.util.TripleBlockHalf;
 
 import javax.annotation.Nullable;
 
-public class TriplePlantBlock extends BushBlock {
+/* public class TriplePlantBlock extends BushBlock {
         public static final EnumProperty<TripleBlockHalf> HALF = ModBlockStateProperties.TRIPLE_BLOCK_HALF;
 
         public TriplePlantBlock(BlockBehaviour.Properties properties) {
@@ -118,3 +116,4 @@ public class TriplePlantBlock extends BushBlock {
             return Mth.getSeed(p_52892_.getX(), p_52892_.below(p_52891_.getValue(HALF) == TripleBlockHalf.LOWER ? 0 : 1).getY(), p_52892_.getZ());
         }
 }
+ */

@@ -107,6 +107,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BELEMNOPTERIS = registerBlock("belemnopteris",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
+    public static final RegistryObject<Block> BAIERA = registerBlock("baiera",
+            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
     public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = registerBlock("archaeopteris_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
 
@@ -133,6 +136,15 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LIMESTONE = registerBlock("limestone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
+
+    public static final RegistryObject<Block> CONIFER_DIRT = registerBlock("conifer_dirt",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+
+    public static final RegistryObject<Block> CONIFER_BEDDING = registerBlock("conifer_bedding",
+            () -> new GrassBlock(BlockBehaviour.Properties.of(Material.DIRT)));
+
+    public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     private static <T extends Block> RegistryObject<T> registerOre(String name, Supplier<T> block) {
             registerBlock(name,
