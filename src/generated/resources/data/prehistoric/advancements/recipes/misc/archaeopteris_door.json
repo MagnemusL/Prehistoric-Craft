@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "prehistoric:archaeopteris_door"
+    ]
+  },
+  "criteria": {
+    "has_archaeopteris_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "prehistoric:archaeopteris_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "prehistoric:archaeopteris_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_archaeopteris_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

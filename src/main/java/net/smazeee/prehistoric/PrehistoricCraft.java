@@ -17,6 +17,7 @@ import net.smazeee.prehistoric.block.entity.ModBlockEntities;
 import net.smazeee.prehistoric.fluids.ModFluids;
 import net.smazeee.prehistoric.item.ModItems;
 import net.smazeee.prehistoric.painting.ModPaintings;
+import net.smazeee.prehistoric.recipe.ModRecipes;
 import net.smazeee.prehistoric.screen.AcidShowerScreen;
 import net.smazeee.prehistoric.screen.ModMenuTypes;
 import net.smazeee.prehistoric.world.structures.ModStructures;
@@ -41,6 +42,8 @@ public class PrehistoricCraft {
         ModBlockEntities.register(modEventBus);
 
         ModPaintings.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         //ModBlockStateProperties.register(modEventBus);
 

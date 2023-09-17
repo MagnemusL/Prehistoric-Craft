@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prehistoric:archaeopteris_log"
+    }
+  ],
+  "result": {
+    "item": "prehistoric:archaeopteris_planks"
+  }
+}

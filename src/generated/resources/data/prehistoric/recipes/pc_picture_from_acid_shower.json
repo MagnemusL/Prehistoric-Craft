@@ -1,0 +1,17 @@
+{
+  "type": "prehistoric:acid_shower",
+  "ingredients": [
+    {
+      "item": "prehistoric:sulfur"
+    },
+    {
+      "item": "prehistoric:charged_machine_core"
+    },
+    {
+      "item": "prehistoric:acid_bucket"
+    }
+  ],
+  "output": {
+    "item": "prehistoric:pc_picture"
+  }
+}

@@ -2,6 +2,8 @@ package net.smazeee.prehistoric.block.custom.machines;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.ComponentUtils;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -28,8 +30,11 @@ import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.block.entity.AcidShowerBE;
 import net.smazeee.prehistoric.block.entity.ModBlockEntities;
+import org.apache.logging.log4j.core.config.builder.api.Component;
 
 import javax.annotation.Nullable;
+import java.awt.*;
+import java.util.UUID;
 
 public class AcidShowerBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -43,6 +48,11 @@ public class AcidShowerBlock extends BaseEntityBlock {
     public AcidShowerBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER));
+    }
+
+    @Override
+    public void onPlace(BlockState p_60566_, Level p_60567_, BlockPos p_60568_, BlockState p_60569_, boolean p_60570_) {
+        super.onPlace(p_60566_, p_60567_, p_60568_, p_60569_, p_60570_);
     }
 
     public BlockState updateShape(BlockState state, Direction direction, BlockState state1, LevelAccessor accessor, BlockPos pos, BlockPos pos1) {
@@ -157,6 +167,9 @@ public class AcidShowerBlock extends BaseEntityBlock {
     @org.jetbrains.annotations.Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createTickerHelper(type, ModBlockEntities.ACID_SHOWER_BE.get(), AcidShowerBE::tick);
+        if (!level.isClientSide) {
+            return createTickerHelper(type, ModBlockEntities.ACID_SHOWER_BE.get(), AcidShowerBE::tick);
+        }
+        return null;
     }
 }

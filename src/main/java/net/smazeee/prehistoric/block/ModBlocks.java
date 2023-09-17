@@ -25,9 +25,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricCraft.MOD_ID);
 
-    public static final RegistryObject<Block> ARCHAEOPTERIS_LOG = registerBlock("archaeopteris_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-
     public static final RegistryObject<Block> ARCHAEOPTERIS_WOOD = registerBlock("archaeopteris_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
@@ -138,13 +135,16 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
 
     public static final RegistryObject<Block> CONIFER_DIRT = registerBlock("conifer_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)));
 
     public static final RegistryObject<Block> CONIFER_BEDDING = registerBlock("conifer_bedding",
-            () -> new GrassBlock(BlockBehaviour.Properties.of(Material.DIRT)));
+            () -> new GrassBlock(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_LOG = registerBlock("archaeopteris_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
     private static <T extends Block> RegistryObject<T> registerOre(String name, Supplier<T> block) {
             registerBlock(name,

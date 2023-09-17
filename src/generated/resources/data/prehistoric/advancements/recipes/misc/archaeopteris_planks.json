@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "prehistoric:archaeopteris_planks"
+    ]
+  },
+  "criteria": {
+    "has_archaeopteris_logs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "prehistoric:archaeopteris_log"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "prehistoric:archaeopteris_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_archaeopteris_logs",
+      "has_the_recipe"
+    ]
+  ]
+}

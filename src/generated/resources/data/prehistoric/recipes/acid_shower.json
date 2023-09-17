@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#T#",
+    "#G#",
+    "IRI"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "T": {
+      "item": "minecraft:iron_trapdoor"
+    }
+  },
+  "result": {
+    "item": "prehistoric:acid_shower"
+  }
+}

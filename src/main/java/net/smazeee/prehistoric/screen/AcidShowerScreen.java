@@ -35,6 +35,10 @@ public class AcidShowerScreen extends AbstractContainerScreen<AcidShowerMenu> {
         int y = (height - imageHeight) / 2;
 
         this.blit(stack, x, y, 0, 0, 175, 206);
+
+        if (menu.isCrafting()) {
+            blit(stack, x + 84, y + 46, 175, 0, 11, menu.getScaledProgress());
+        }
     }
 
     @Override
