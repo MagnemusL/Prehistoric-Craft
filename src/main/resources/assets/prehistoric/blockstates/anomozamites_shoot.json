@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model":  "prehistoric:block/anomozamites_shoot" }
+    "": {
+    "model": "prehistoric:block/anomozamites_shoot"
+    }
   }
 }

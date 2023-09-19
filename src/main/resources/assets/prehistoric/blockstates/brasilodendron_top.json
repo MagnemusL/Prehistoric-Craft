@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model":  "prehistoric:block/brasilodendron_top" }
+  "": {
+    "model": "prehistoric:block/brasilodendron_top"
+    }
   }
 }

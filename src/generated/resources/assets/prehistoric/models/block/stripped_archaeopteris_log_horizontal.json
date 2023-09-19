@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "side": "prehistoric:block/stripped_archaeopteris_log",
+    "end": "prehistoric:block/stripped_archaeopteris_top"
+  }
+}

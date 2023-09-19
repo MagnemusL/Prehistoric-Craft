@@ -23,6 +23,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.EMPTY_JAR.get());
         simpleItem(ModItems.BELEMOPTERIS_SPORE_JAR.get());
         simpleItem(ModItems.MUD_WATER_BUCKET.get());
+        simpleItem(ModItems.CRETACEOUS_FOSSIL.get());
+        simpleItem(ModItems.JURASSIC_FOSSIL.get());
+        simpleItem(ModItems.TRIASSIC_FOSSIL.get());
+        simpleItem(ModItems.PERMIAN_FOSSIL.get());
+        simpleItem(ModItems.CARBONIFEROUS_FOSSIL.get());
+        simpleItem(ModItems.DEVONIAN_FOSSIL.get());
+        simpleItem(ModItems.SILURIAN_FOSSIL.get());
+        simpleItem(ModItems.ORDOVICIAN_FOSSIL.get());
+        simpleItem(ModItems.CAMBRIAN_FOSSIL.get());
+        simpleItem(ModItems.PRECAMBRIAN_FOSSIL.get());
     }
 
     private ItemModelBuilder simpleItem(Item item) {

@@ -11,6 +11,7 @@ import net.minecraft.world.level.storage.loot.ValidationContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.smazeee.prehistoric.datagen.loot.ModBlockLootTables;
+import net.smazeee.prehistoric.datagen.loot.ModChestLootTables;
 
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import java.util.function.Supplier;
 public class ModLootTableProvider extends LootTableProvider {
     private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>>
             loot_tables = ImmutableList.of(Pair.of(ModBlockLootTables::new, LootContextParamSets.BLOCK),
-            Pair.of(ModBlockLootTables::new, LootContextParamSets.CHEST));
+            Pair.of(ModChestLootTables::new, LootContextParamSets.CHEST));
 
     public ModLootTableProvider(DataGenerator generator) {
         super(generator);

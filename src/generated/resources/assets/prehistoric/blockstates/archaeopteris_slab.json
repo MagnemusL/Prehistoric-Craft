@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "prehistoric:block/archaeopteris_slab_top"
+    },
+    "type=bottom": {
+      "model": "prehistoric:block/archaeopteris_slab"
+    },
+    "type=double": {
+      "model": "prehistoric:block/archaeopteris_planks"
+    }
+  }
+}

@@ -2,33 +2,33 @@
   "variants": {
     "facing=east,half=upper": {
       "model": "prehistoric:block/acid_shower_t",
-      "y": 90
+      "y": 180
     },
     "facing=north,half=upper": {
-      "model": "prehistoric:block/acid_shower_t"
+      "model": "prehistoric:block/acid_shower_t",
+      "y": 90
     },
     "facing=south,half=upper": {
       "model": "prehistoric:block/acid_shower_t",
-      "y": 180
+      "y": 270
     },
     "facing=west,half=upper": {
-      "model": "prehistoric:block/acid_shower_t",
-      "y": 270
+      "model": "prehistoric:block/acid_shower_t"
     },
     "facing=east,half=lower": {
       "model": "prehistoric:block/acid_shower_b",
-      "y": 90
+      "y": 180
     },
     "facing=north,half=lower": {
-      "model": "prehistoric:block/acid_shower_b"
+      "model": "prehistoric:block/acid_shower_b",
+      "y": 90
     },
     "facing=south,half=lower": {
       "model": "prehistoric:block/acid_shower_b",
-      "y": 180
+      "y": 270
     },
     "facing=west,half=lower": {
-      "model": "prehistoric:block/acid_shower_b",
-      "y": 270
+      "model": "prehistoric:block/acid_shower_b"
     }
   }
 }

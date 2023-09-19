@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model":  "prehistoric:block/conifer_bedding" }
+  "": {
+    "model": "prehistoric:block/conifer_bedding"
+    }
   }
 }

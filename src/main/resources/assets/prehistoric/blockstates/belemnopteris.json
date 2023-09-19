@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model":  "prehistoric:block/belemnopteris" }
+  "": {
+    "model": "prehistoric:block/belemnopteris"
+    }
   }
 }

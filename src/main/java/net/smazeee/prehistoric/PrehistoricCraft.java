@@ -58,6 +58,8 @@ public class PrehistoricCraft {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_TRAPDOOR.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDA_SHOOT.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BELEMNOPTERIS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_BOTTOM.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_MIDDLE.get(), RenderType.cutout());

@@ -17,6 +17,13 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(AcidShowerBE::new,
                             ModBlocks.ACID_SHOWER.get()).build(null));
 
+    /*public static final RegistryObject<BlockEntityType<CycadeoidaBE>> CYCADEOIDA_LOGIC =
+            BLOCK_ENTITIES.register("cycadeoida_logic", () ->
+                    BlockEntityType.Builder.of(CycadeoidaBE::new,
+                            ModBlocks.CYCADEOIDA_TRUNK.get()).build(null));
+
+     */
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

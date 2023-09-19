@@ -1,11 +1,10 @@
 {
   "variants": {
-    "half=upper": {
-      "model": "prehistoric:block/baiera_t",
-      "y": 90
-    },
     "half=lower": {
       "model": "prehistoric:block/baiera_b"
+    },
+    "half=upper": {
+      "model": "prehistoric:block/baiera_t"
     }
   }
 }

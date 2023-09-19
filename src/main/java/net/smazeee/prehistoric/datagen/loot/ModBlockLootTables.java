@@ -33,6 +33,9 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ACID_SHOWER.get());
         this.dropSelf(ModBlocks.LIMESTONE.get());
         this.dropSelf(ModBlocks.CONIFER_DIRT.get());
+        //this.dropSelf(ModBlocks.CYCADEOIDA_TRUNK.get());
+        this.dropSelf(ModBlocks.CYCADEOIDA_SHOOT.get());
+        this.dropSelf(ModBlocks.BJUVIA_TRUNK.get());
         this.add(ModBlocks.CONIFER_BEDDING.get(), (block) -> createSingleItemTableWithSilkTouch(block, ModBlocks.CONIFER_DIRT.get()));
 
         this.dropSelf(ModBlocks.LIMESTONE_BRICKS.get());
@@ -42,9 +45,35 @@ public class ModBlockLootTables extends BlockLoot {
 
         this.add(ModBlocks.ARCHAEOPTERIS_SLAB.get(), BlockLoot::createSlabItemTable);
 
-        /*this.add(ModBlocks.ARCHAEOPTERIS_DOOR.get(),
-                (block) -> createOreDrop(ModBlocks.ARCHAEOPTERIS_DOOR.get(), ModItems.ACID_BUCKET.get()));
-        */
+        this.add(ModBlocks.CRETACEOUS.get(),
+                (block -> createOreDrop(ModBlocks.CRETACEOUS.get(), ModItems.CRETACEOUS_FOSSIL.get())));
+
+        this.add(ModBlocks.JURASSIC.get(),
+                (block -> createOreDrop(ModBlocks.JURASSIC.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.TRIASSIC.get(),
+                (block -> createOreDrop(ModBlocks.JURASSIC.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.PERMIAN.get(),
+                (block -> createOreDrop(ModBlocks.PERMIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.CARBONIFEROUS.get(),
+                (block -> createOreDrop(ModBlocks.CARBONIFEROUS.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.DEVONIAN.get(),
+                (block -> createOreDrop(ModBlocks.DEVONIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.SILURIAN.get(),
+                (block -> createOreDrop(ModBlocks.SILURIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.ORDOVICIAN.get(),
+                (block -> createOreDrop(ModBlocks.ORDOVICIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.CAMBRIAN.get(),
+                (block -> createOreDrop(ModBlocks.CAMBRIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+
+        this.add(ModBlocks.PRECAMBRIAN.get(),
+                (block -> createOreDrop(ModBlocks.PRECAMBRIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
 
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_LOG.get());
     }

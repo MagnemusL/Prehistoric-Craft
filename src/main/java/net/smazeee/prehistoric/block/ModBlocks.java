@@ -15,8 +15,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
+import net.smazeee.prehistoric.block.custom.ModDoublePlantBlock;
 import net.smazeee.prehistoric.block.custom.ModFlammableRotatedPillarBlock;
 import net.smazeee.prehistoric.block.custom.machines.AcidShowerBlock;
+import net.smazeee.prehistoric.block.custom.machines.CycadeoidaBlock;
 import net.smazeee.prehistoric.item.ModItems;
 
 import java.util.function.Supplier;
@@ -24,6 +26,10 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricCraft.MOD_ID);
+
+
+    public static final RegistryObject<Block> ARCHAEOPTERIS_LOG = registerBlock("archaeopteris_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_WOOD = registerBlock("archaeopteris_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
@@ -105,7 +111,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> BAIERA = registerBlock("baiera",
-            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+            () -> new ModDoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = registerBlock("archaeopteris_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
@@ -135,16 +141,53 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
 
     public static final RegistryObject<Block> CONIFER_DIRT = registerBlock("conifer_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(0.5F).sound(SoundType.GRAVEL)));
 
     public static final RegistryObject<Block> CONIFER_BEDDING = registerBlock("conifer_bedding",
-            () -> new GrassBlock(BlockBehaviour.Properties.of(Material.DIRT).sound(SoundType.GRASS)));
+            () -> new GrassBlock(BlockBehaviour.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> ARCHAEOPTERIS_LOG = registerBlock("archaeopteris_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> BJUVIA_TRUNK = registerBlock("bjuvia_trunk",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).noOcclusion()));
+
+    //public static final RegistryObject<Block> CYCADEOIDA_TRUNK = registerBlock("cycadeoida_trunk",
+    //        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).noOcclusion()));
+
+    public static final RegistryObject<Block> CYCADEOIDA_SHOOT = registerBlock("cycadeoida_shoot",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noOcclusion().instabreak()));
+
+    public static final RegistryObject<Block> CRETACEOUS = registerBlock("cretaceous",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> JURASSIC = registerBlock("jurassic",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> TRIASSIC = registerBlock("triassic",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> PERMIAN = registerBlock("permian",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> CARBONIFEROUS = registerBlock("carboniferous",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> DEVONIAN = registerBlock("devonian",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> SILURIAN = registerBlock("silurian",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> ORDOVICIAN = registerBlock("ordovician",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> CAMBRIAN = registerBlock("cambrian",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> PRECAMBRIAN = registerBlock("precambrian",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
 
     private static <T extends Block> RegistryObject<T> registerOre(String name, Supplier<T> block) {
             registerBlock(name,

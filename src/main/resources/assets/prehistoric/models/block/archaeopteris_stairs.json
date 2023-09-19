@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "prehistoric:block/archaeopteris_block",
-    "top": "prehistoric:block/archaeopteris_block",
-    "side": "prehistoric:block/archaeopteris_block"
-  }
-}

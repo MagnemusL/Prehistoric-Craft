@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "bottom": "prehistoric:block/archaeopteris_door_bottom",
+    "top": "prehistoric:block/archaeopteris_door_top"
+  }
+}

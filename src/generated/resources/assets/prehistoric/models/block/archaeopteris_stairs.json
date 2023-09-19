@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "prehistoric:block/archaeopteris_planks",
+    "bottom": "prehistoric:block/archaeopteris_planks",
+    "top": "prehistoric:block/archaeopteris_planks"
+  }
+}
