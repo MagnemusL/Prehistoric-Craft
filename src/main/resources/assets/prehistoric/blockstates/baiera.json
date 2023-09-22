@@ -1,10 +1,16 @@
 {
   "variants": {
-    "half=lower": {
+    "half=lower,flowering=false": {
       "model": "prehistoric:block/baiera_b"
     },
-    "half=upper": {
+    "half=upper,flowering=false": {
       "model": "prehistoric:block/baiera_t"
+    },
+    "half=lower,flowering=true": {
+      "model": "prehistoric:block/baiera_b_flowering"
+    },
+    "half=upper,flowering=true": {
+      "model": "prehistoric:block/baiera_t_flowering"
     }
   }
 }

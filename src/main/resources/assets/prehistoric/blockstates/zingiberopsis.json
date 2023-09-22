@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "half=lower,flowering=false": {
+      "model": "prehistoric:block/zingiberopsis_b"
+    },
+    "half=upper,flowering=false": {
+      "model": "prehistoric:block/zingiberopsis_t"
+    },
+    "half=lower,flowering=true": {
+      "model": "prehistoric:block/zingiberopsis_b_flowering"
+    },
+    "half=upper,flowering=true": {
+      "model": "prehistoric:block/zingiberopsis_t_flowering"
+    }
+  }
+}

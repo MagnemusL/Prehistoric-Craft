@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-    "model": "prehistoric:block/cycadeoida_trunk"
+    "flowering=false": {
+      "model": "prehistoric:block/cycadeoida_trunk"
+    },
+    "flowering=true": {
+      "model": "prehistoric:block/cycadeoida_trunk_flowering"
     }
   }
 }

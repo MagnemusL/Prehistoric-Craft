@@ -61,13 +61,7 @@ public class ModDoublePlantBlock extends BushBlock {
     }
 
     public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
-        if (state.getValue(HALF) != DoubleBlockHalf.UPPER) {
-            return super.canSurvive(state, reader, pos);
-        } else {
-            BlockState blockstate = reader.getBlockState(pos.below());
-            if (state.getBlock() != this) return super.canSurvive(state, reader, pos); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
-            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
-        }
+        return true;
     }
 
     public static void placeAt(LevelAccessor accessor, BlockState state, BlockPos pos, int stuff) {

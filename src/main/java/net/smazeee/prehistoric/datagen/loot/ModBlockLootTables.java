@@ -23,9 +23,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_TRAPDOOR.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_LEAVES.get());
         this.dropSelf(ModBlocks.ANOMOZAMITES_SHOOT.get());
-        this.dropSelf(ModBlocks.BRASILODENDRON_BOTTOM.get());
-        this.dropSelf(ModBlocks.BRASILODENDRON_MIDDLE.get());
-        this.dropSelf(ModBlocks.BRASILODENDRON_TOP.get());
+        this.dropSelf(ModBlocks.BRASILODENDRON.get());
         this.dropSelf(ModBlocks.BELEMNOPTERIS.get());
         this.dropSelf(ModBlocks.BAIERA.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_DOOR.get());
@@ -33,7 +31,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ACID_SHOWER.get());
         this.dropSelf(ModBlocks.LIMESTONE.get());
         this.dropSelf(ModBlocks.CONIFER_DIRT.get());
-        //this.dropSelf(ModBlocks.CYCADEOIDA_TRUNK.get());
+        this.dropSelf(ModBlocks.CYCADEOIDA_TRUNK.get());
         this.dropSelf(ModBlocks.CYCADEOIDA_SHOOT.get());
         this.dropSelf(ModBlocks.BJUVIA_TRUNK.get());
         this.add(ModBlocks.CONIFER_BEDDING.get(), (block) -> createSingleItemTableWithSilkTouch(block, ModBlocks.CONIFER_DIRT.get()));

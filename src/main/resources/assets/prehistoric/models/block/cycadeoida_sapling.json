@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "prehistoric:block/cycadeoida_sapling"
+  }
+}

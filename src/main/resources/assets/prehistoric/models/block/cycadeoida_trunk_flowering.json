@@ -2,8 +2,8 @@
   "parent": "block/block",
   "credit": "Made with Blockbench",
   "textures": {
-    "1": "prehistoric:block/cycadeoida_trunk",
-    "particle": "prehistoric:block/cycadeoida_trunk"
+    "1": "prehistoric:block/cycadeoida_trunk_flowering",
+    "particle": "prehistoric:block/cycadeoida_trunk_flowering"
   },
   "elements": [
     {

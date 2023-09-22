@@ -18,27 +18,30 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.WallSide;
 import net.smazeee.prehistoric.util.TripleBlockHalf;
 
 import javax.annotation.Nullable;
 
-/* public class TriplePlantBlock extends BushBlock {
-        public static final EnumProperty<TripleBlockHalf> HALF = ModBlockStateProperties.TRIPLE_BLOCK_HALF;
+public class TriplePlantBlock extends BushBlock {
+    public static final EnumProperty<TripleBlockHalf> TRIPLE_BLOCK_HALF = EnumProperty.create("stage", TripleBlockHalf.class);
+        public static final EnumProperty<TripleBlockHalf> HALF = TRIPLE_BLOCK_HALF;
 
         public TriplePlantBlock(BlockBehaviour.Properties properties) {
             super(properties);
             this.registerDefaultState(this.stateDefinition.any().setValue(HALF, TripleBlockHalf.LOWER));
         }
 
-        public BlockState updateShape(BlockState state, Direction axis, BlockState blockState, LevelAccessor levelAccessor, BlockPos pos, BlockPos pos1) {
-            TripleBlockHalf tripleBlockHalf = state.getValue(HALF);
-            if (axis.getAxis() != Direction.Axis.Y || tripleBlockHalf == TripleBlockHalf.LOWER != (axis == Direction.UP) || blockState.is(this) && blockState.getValue(HALF) != tripleBlockHalf) {
-                return tripleBlockHalf == TripleBlockHalf.LOWER && axis == Direction.DOWN && !state.canSurvive(levelAccessor, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, axis, blockState, levelAccessor, pos, pos1);
-            } else {
-                return Blocks.AIR.defaultBlockState();
-            }
+    public BlockState updateShape(BlockState state, Direction direction, BlockState blockState, LevelAccessor accessor, BlockPos pos, BlockPos blockPos) {
+        TripleBlockHalf tripleblockhalf = state.getValue(HALF);
+        if (direction.getAxis() != Direction.Axis.Y || tripleblockhalf == TripleBlockHalf.LOWER != (direction == Direction.UP) || blockState.is(this) && blockState.getValue(HALF) != tripleblockhalf) {
+            return tripleblockhalf == TripleBlockHalf.LOWER && direction == Direction.DOWN && !state.canSurvive(accessor, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, direction, blockState, accessor, pos, blockPos);
+        } else {
+            return Blocks.AIR.defaultBlockState();
         }
+    }
 
         @Nullable
         public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
@@ -50,7 +53,8 @@ import javax.annotation.Nullable;
 
         public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity entity, ItemStack stack) {
             BlockPos blockpos = pos.above();
-            level.setBlock(blockpos, copyWaterloggedFrom(level, blockpos, this.defaultBlockState().setValue(HALF, TripleBlockHalf.UPPER)), 3);
+            BlockPos blockPosAbove = blockpos.above();
+            level.setBlock(blockpos, copyWaterloggedFrom(level, blockpos, this.defaultBlockState().setValue(HALF, TripleBlockHalf.MIDDLE)), 3);
         }
 
         public boolean canSurvive(BlockState state, LevelReader levelReader, BlockPos pos) {
@@ -58,7 +62,8 @@ import javax.annotation.Nullable;
                 return super.canSurvive(state, levelReader, pos);
             } else {
                 BlockState blockstate = levelReader.getBlockState(pos.below());
-                if (state.getBlock() != this) return super.canSurvive(state, levelReader, pos); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
+                if (state.getBlock() != this)
+                    return super.canSurvive(state, levelReader, pos); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
                 return blockstate.is(this) && blockstate.getValue(HALF) == TripleBlockHalf.LOWER;
             }
         }
@@ -91,8 +96,8 @@ import javax.annotation.Nullable;
         }
 
         protected static void preventCreativeDropFromBottomPart(Level level, BlockPos pos, BlockState state, Player player) {
-            TripleBlockHalf doubleblockhalf = state.getValue(HALF);
-            if (doubleblockhalf == TripleBlockHalf.UPPER) {
+            TripleBlockHalf tripleblockhalf = state.getValue(HALF);
+            if (tripleblockhalf == TripleBlockHalf.UPPER) {
                 BlockPos blockpos = pos.below();
                 BlockState blockstate = level.getBlockState(blockpos);
                 if (blockstate.is(state.getBlock()) && blockstate.getValue(HALF) == TripleBlockHalf.LOWER) {
@@ -104,8 +109,8 @@ import javax.annotation.Nullable;
 
         }
 
-        protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_52901_) {
-            p_52901_.add(HALF);
+        protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+            builder.add(HALF);
         }
 
         public BlockBehaviour.OffsetType getOffsetType() {
@@ -116,4 +121,3 @@ import javax.annotation.Nullable;
             return Mth.getSeed(p_52892_.getX(), p_52892_.below(p_52891_.getValue(HALF) == TripleBlockHalf.LOWER ? 0 : 1).getY(), p_52892_.getZ());
         }
 }
- */

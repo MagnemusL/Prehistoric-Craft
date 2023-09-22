@@ -15,10 +15,12 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
-import net.smazeee.prehistoric.block.custom.ModDoublePlantBlock;
-import net.smazeee.prehistoric.block.custom.ModFlammableRotatedPillarBlock;
+import net.smazeee.prehistoric.block.custom.*;
 import net.smazeee.prehistoric.block.custom.machines.AcidShowerBlock;
-import net.smazeee.prehistoric.block.custom.machines.CycadeoidaBlock;
+import net.smazeee.prehistoric.block.custom.plants.BaieraBlock;
+import net.smazeee.prehistoric.block.custom.plants.CycadeoidaBlock;
+import net.smazeee.prehistoric.block.custom.plants.CycadeoidaGrower;
+import net.smazeee.prehistoric.block.custom.plants.ZingiberopsisBlock;
 import net.smazeee.prehistoric.item.ModItems;
 
 import java.util.function.Supplier;
@@ -98,20 +100,17 @@ public class ModBlocks {
     //public static final RegistryObject<Block> ARCHAEOPTERIS_SAPLING = registerBlock("archaeopteris_sapling",
     //      () -> new SaplingBlock(new ArchaeopterisTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    public static final RegistryObject<Block> BRASILODENDRON_BOTTOM = registerBlock("brasilodendron_bottom",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
-
-    public static final RegistryObject<Block> BRASILODENDRON_MIDDLE = registerBlock("brasilodendron_middle",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
-
-    public static final RegistryObject<Block> BRASILODENDRON_TOP = registerBlock("brasilodendron_top",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+    public static final RegistryObject<Block> BRASILODENDRON = registerBlock("brasilodendron",
+            () -> new TriplePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> BELEMNOPTERIS = registerBlock("belemnopteris",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> BAIERA = registerBlock("baiera",
-            () -> new ModDoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+            () -> new BaieraBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> ZINGIBEROPSIS = registerBlock("zingiberopsis",
+            () -> new ZingiberopsisBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = registerBlock("archaeopteris_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
@@ -150,13 +149,16 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static final RegistryObject<Block> BJUVIA_TRUNK = registerBlock("bjuvia_trunk",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()));
 
-    //public static final RegistryObject<Block> CYCADEOIDA_TRUNK = registerBlock("cycadeoida_trunk",
-    //        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).noOcclusion()));
+    public static final RegistryObject<Block> CYCADEOIDA_TRUNK = registerBlock("cycadeoida_trunk",
+            () -> new CycadeoidaBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()));
 
     public static final RegistryObject<Block> CYCADEOIDA_SHOOT = registerBlock("cycadeoida_shoot",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noOcclusion().instabreak()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().instabreak()));
+
+    public static final RegistryObject<Block> CYCADEOIDA_SAPLING = registerBlock("cycadeoida_sapling",
+            () -> new CycadeoidaGrower(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().instabreak()));
 
     public static final RegistryObject<Block> CRETACEOUS = registerBlock("cretaceous",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));

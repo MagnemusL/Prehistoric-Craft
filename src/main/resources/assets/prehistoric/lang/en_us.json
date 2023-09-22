@@ -19,9 +19,11 @@
   "block.prehistoric.brasilodendron_middle": "Brasilodendron Middle",
   "block.prehistoric.brasilodendron_top": "Brasilodendron Top",
   "block.prehistoric.baiera": "Baiera",
+  "block.prehistoric.zingiberopsis": "Zingiberopsis",
   "block.prehistoric.bjuvia_trunk": "Bjuvia Trunk",
-  "block.prehistoric.cycadeoida_trunk": "Cycadeoida Trunk",
-  "block.prehistoric.cycadeoida_shoot": "Cycadeoida Shoot",
+  "block.prehistoric.cycadeoida_trunk": "Cycadeoidea Trunk",
+  "block.prehistoric.cycadeoida_shoot": "Cycadeoidea Shoot",
+  "block.prehistoric.cycadeoida_sapling": "Cycadeoidea Sapling",
   "block.prehistoric.anomozamites_shoot": "Anomozamites Shoot",
 
   "block.prehistoric.cretaceous": "Cretaceous Fossil",
@@ -48,6 +50,7 @@
   "item.prehistoric.mud_water_bucket": "Mud Water Bucket",
   "item.prehistoric.empty_jar": "Empty Jar",
   "item.prehistoric.belemnopteris_spore_jar": "Belemnopteris Spore Jar",
+  "item.prehistoric.cycadeoida_spore_jar": "Cycadeoida Spore Jar",
   "item.prehistoric.uncharged_machine_core": "Machine Core",
   "item.prehistoric.charged_machine_core": "Charged Machine Core"
 }

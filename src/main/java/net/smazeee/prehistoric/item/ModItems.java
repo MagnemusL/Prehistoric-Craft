@@ -33,7 +33,10 @@ public class ModItems {
     public static final RegistryObject<Item> EMPTY_JAR = ITEMS.register("empty_jar",
             () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
-    public static final RegistryObject<Item> BELEMOPTERIS_SPORE_JAR = ITEMS.register("belemnopteris_spore_jar",
+    public static final RegistryObject<Item> BELEMNOPTERIS_SPORE_JAR = ITEMS.register("belemnopteris_spore_jar",
+            () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> CYCADEOIDA_SPORE_JAR = ITEMS.register("cycadeoida_spore_jar",
             () -> new JarItem(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> UNCHARGED_MACHINE_CORE = ITEMS.register("uncharged_machine_core",

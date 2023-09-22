@@ -21,7 +21,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.UNCHARGED_MACHINE_CORE.get());
         simpleItem(ModItems.SULFUR.get());
         simpleItem(ModItems.EMPTY_JAR.get());
-        simpleItem(ModItems.BELEMOPTERIS_SPORE_JAR.get());
+        simpleItem(ModItems.BELEMNOPTERIS_SPORE_JAR.get());
+        simpleItem(ModItems.CYCADEOIDA_SPORE_JAR.get());
         simpleItem(ModItems.MUD_WATER_BUCKET.get());
         simpleItem(ModItems.CRETACEOUS_FOSSIL.get());
         simpleItem(ModItems.JURASSIC_FOSSIL.get());

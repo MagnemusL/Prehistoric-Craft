@@ -1,0 +1,13 @@
+{
+  "variants": {
+  "stage=bottom": {
+    "model": "prehistoric:block/brasilodendron_bottom"
+    },
+    "stage=middle": {
+      "model": "prehistoric:block/brasilodendron_middle"
+    },
+    "stage=upper": {
+      "model": "prehistoric:block/brasilodendron_top"
+    }
+  }
+}

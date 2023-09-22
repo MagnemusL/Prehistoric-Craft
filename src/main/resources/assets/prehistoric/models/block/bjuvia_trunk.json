@@ -1,0 +1,23 @@
+{
+  "credit": "Made with Blockbench",
+  "texture_size": [128, 128],
+  "textures": {
+    "1": "prehistoric:block/bjuvia_trunk",
+    "particle": "prehistoric:block/bjuvia_trunk"
+  },
+  "elements": [
+    {
+      "from": [3, 0, 3],
+      "to": [13, 16, 13],
+      "rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+      "faces": {
+        "north": {"uv": [5, 8, 10, 16], "texture": "#1"},
+        "east": {"uv": [5, 8, 10, 16], "texture": "#1"},
+        "south": {"uv": [5, 8, 10, 16], "texture": "#1"},
+        "west": {"uv": [5, 8, 10, 16], "texture": "#1"},
+        "up": {"uv": [15, 10, 10, 5], "texture": "#1"},
+        "down": {"uv": [15, 5, 10, 10], "texture": "#1"}
+      }
+    }
+  ]
+}

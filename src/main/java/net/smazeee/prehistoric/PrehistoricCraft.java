@@ -59,12 +59,12 @@ public class PrehistoricCraft {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_TRAPDOOR.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDA_SHOOT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDA_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BELEMNOPTERIS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_BOTTOM.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_MIDDLE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON_TOP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BAIERA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ZINGIBEROPSIS.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModFluids.MUD_WATER_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.MUD_WATER_FLUID.get(), RenderType.translucent());
