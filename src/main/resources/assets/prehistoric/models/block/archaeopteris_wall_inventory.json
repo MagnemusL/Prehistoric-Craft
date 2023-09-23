@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "prehistoric:block/archaeopteris_block"
+    "texture": "prehistoric:block/archaeopteris_planks"
   }
 }

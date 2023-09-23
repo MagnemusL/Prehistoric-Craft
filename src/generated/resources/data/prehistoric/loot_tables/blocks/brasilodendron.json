@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "prehistoric:brasilodendron_bottom"
+          "name": "prehistoric:brasilodendron"
         }
       ],
       "conditions": [

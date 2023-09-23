@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"cross": "prehistoric:block/bisonia_niemii_t"
+	}
+}

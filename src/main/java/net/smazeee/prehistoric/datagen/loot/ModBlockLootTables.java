@@ -17,6 +17,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.STRIPPED_ARCHAEOPTERIS_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_ARCHAEOPTERIS_LOG.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_STAIRS.get());
+        this.dropSelf(ModBlocks.ARCHAEOPTERIS_SAPLING.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_FENCE.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_FENCE_GATE.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_WALLS.get());
@@ -25,6 +26,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ANOMOZAMITES_SHOOT.get());
         this.dropSelf(ModBlocks.BRASILODENDRON.get());
         this.dropSelf(ModBlocks.BELEMNOPTERIS.get());
+        this.dropSelf(ModBlocks.ZINGIBEROPSIS.get());
+        this.dropSelf(ModBlocks.BISONIA_NIEMII.get());
         this.dropSelf(ModBlocks.BAIERA.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_DOOR.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_PLANKS.get());
@@ -33,11 +36,11 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.CONIFER_DIRT.get());
         this.dropSelf(ModBlocks.CYCADEOIDA_TRUNK.get());
         this.dropSelf(ModBlocks.CYCADEOIDA_SHOOT.get());
+        this.dropSelf(ModBlocks.CYCADEOIDA_SAPLING.get());
         this.dropSelf(ModBlocks.BJUVIA_TRUNK.get());
         this.add(ModBlocks.CONIFER_BEDDING.get(), (block) -> createSingleItemTableWithSilkTouch(block, ModBlocks.CONIFER_DIRT.get()));
 
         this.dropSelf(ModBlocks.LIMESTONE_BRICKS.get());
-
         this.add(ModBlocks.ARCHAEOPTERIS_LEAVES.get(), (block) ->
                 createLeavesDrops(block, ModBlocks.STRIPPED_ARCHAEOPTERIS_LOG.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 

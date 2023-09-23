@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "prehistoric:block/bisonia_niemii_b"
+    },
+    "half=upper": {
+      "model": "prehistoric:block/bisonia_niemii_t"
+    }
+  }
+}

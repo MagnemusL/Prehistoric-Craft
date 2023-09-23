@@ -1,8 +1,13 @@
 package net.smazeee.prehistoric.item;
 
+import net.minecraft.world.entity.vehicle.Boat;
+import net.minecraft.world.item.BoatItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -11,10 +16,14 @@ import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.fluids.ModFluids;
 import net.smazeee.prehistoric.item.custom.JarItem;
 import net.smazeee.prehistoric.item.custom.MachineCore;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, PrehistoricCraft.MOD_ID);
+
+    public static final RegistryObject<Item> ARCHAEOPTERIS_BOAT = ITEMS.register("archaeopteris_boat",
+            () -> new BoatItem(Boat.Type.SPRUCE, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> MUD_WATER_BUCKET = ITEMS.register("mud_water_bucket",
             () -> new BucketItem(ModFluids.MUD_WATER_FLUID,

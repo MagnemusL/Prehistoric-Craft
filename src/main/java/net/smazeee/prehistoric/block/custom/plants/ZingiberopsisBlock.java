@@ -11,12 +11,7 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.smazeee.prehistoric.PrehistoricCraft;
-import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.block.custom.ModDoublePlantBlock;
-import org.jetbrains.annotations.Nullable;
-import org.lwjgl.system.CallbackI;
 
 import java.util.Random;
 

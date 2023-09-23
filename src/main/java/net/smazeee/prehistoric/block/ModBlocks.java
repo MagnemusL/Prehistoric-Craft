@@ -22,6 +22,7 @@ import net.smazeee.prehistoric.block.custom.plants.CycadeoidaBlock;
 import net.smazeee.prehistoric.block.custom.plants.CycadeoidaGrower;
 import net.smazeee.prehistoric.block.custom.plants.ZingiberopsisBlock;
 import net.smazeee.prehistoric.item.ModItems;
+import net.smazeee.prehistoric.world.feature.tree.archaeopteris.ArchaeopterisTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -97,8 +98,8 @@ public class ModBlocks {
                 }
             });
 
-    //public static final RegistryObject<Block> ARCHAEOPTERIS_SAPLING = registerBlock("archaeopteris_sapling",
-    //      () -> new SaplingBlock(new ArchaeopterisTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> ARCHAEOPTERIS_SAPLING = registerBlock("archaeopteris_sapling",
+          () -> new SaplingBlock(new ArchaeopterisTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> BRASILODENDRON = registerBlock("brasilodendron",
             () -> new TriplePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
@@ -111,6 +112,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ZINGIBEROPSIS = registerBlock("zingiberopsis",
             () -> new ZingiberopsisBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> BISONIA_NIEMII = registerBlock("bisonia_niemii",
+            () -> new ModDoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = registerBlock("archaeopteris_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));

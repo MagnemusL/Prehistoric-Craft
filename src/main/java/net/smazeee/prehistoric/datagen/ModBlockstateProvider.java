@@ -42,7 +42,6 @@ public class ModBlockstateProvider extends BlockStateProvider {
 
         //buttonBlock((ButtonBlock) ModBlocks.hhs.get(), blockTexture(ModBlocks.dfgf.get()));
         //pressurePlateBlock((PressurePlateBlock) ModBlocks.hhs.get(), blockTexture(ModBlocks.dfgf.get()));
-        wallBlock((WallBlock) ModBlocks.ARCHAEOPTERIS_WALLS.get(), blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()));
         fenceBlock((FenceBlock) ModBlocks.ARCHAEOPTERIS_FENCE.get(), blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()));
         fenceGateBlock((FenceGateBlock) ModBlocks.ARCHAEOPTERIS_FENCE_GATE.get(), blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()));
 
@@ -59,7 +58,6 @@ public class ModBlockstateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.ARCHAEOPTERIS_STAIRS.get(), blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()));
         slabBlock((SlabBlock) ModBlocks.ARCHAEOPTERIS_SLAB.get(), blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()),
                 blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()));
-        wallBlock((WallBlock) ModBlocks.ARCHAEOPTERIS_WALLS.get(), blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()));
         trapdoorBlock((TrapDoorBlock) ModBlocks.ARCHAEOPTERIS_TRAPDOOR.get(), new ResourceLocation(PrehistoricCraft.MOD_ID, "block/archaeopteris_trapdoor"), true);
     }
 
