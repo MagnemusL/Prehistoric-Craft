@@ -14,6 +14,21 @@
   "block.prehistoric.archaeopteris_walls": "Archaeopteris Wall",
   "block.prehistoric.archaeopteris_trapdoor": "Archaeopteris Trapdoor",
 
+  "block.prehistoric.liriodendrites_log": "Liriodendrites Log",
+  "block.prehistoric.liriodendrites_planks": "Liriodendrites Planks",
+  "block.prehistoric.liriodendrites_door": "Liriodendrites Door",
+  "block.prehistoric.liriodendrites_wood": "Liriodendrites Wood",
+  "block.prehistoric.stripped_liriodendrites_wood": "Stripped Liriodendrites Wood",
+  "block.prehistoric.stripped_liriodendrites_log": "Stripped Liriodendrites Log",
+  "block.prehistoric.liriodendrites_leaves": "Liriodendrites Leaves",
+  "block.prehistoric.liriodendrites_sapling": "Liriodendrites Sapling",
+  "block.prehistoric.liriodendrites_stairs": "Liriodendrites Stairs",
+  "block.prehistoric.liriodendrites_slab": "Liriodendrites Slab",
+  "block.prehistoric.liriodendrites_fence": "Liriodendrites Fence",
+  "block.prehistoric.liriodendrites_fence_gate": "Liriodendrites Fence Gate",
+  "block.prehistoric.liriodendrites_walls": "Liriodendrites Wall",
+  "block.prehistoric.liriodendrites_trapdoor": "Liriodendrites Trapdoor",
+
   "block.prehistoric.belemnopteris": "Belemnopteris",
   "block.prehistoric.brasilodendron_bottom": "Brasilodendron Bottom",
   "block.prehistoric.brasilodendron_middle": "Brasilodendron Middle",
@@ -51,7 +66,18 @@
   "item.prehistoric.mud_water_bucket": "Mud Water Bucket",
   "item.prehistoric.empty_jar": "Empty Jar",
   "item.prehistoric.belemnopteris_spore_jar": "Belemnopteris Spore Jar",
-  "item.prehistoric.cycadeoida_spore_jar": "Cycadeoida Spore Jar",
+  "item.prehistoric.cycadeoida_spore_jar": "Cycadeoidea Spore Jar",
   "item.prehistoric.uncharged_machine_core": "Machine Core",
-  "item.prehistoric.charged_machine_core": "Charged Machine Core"
+  "item.prehistoric.charged_machine_core": "Charged Machine Core",
+
+  "item.prehistoric.cretaceous_fossil": "Cretaceous Fossil",
+  "item.prehistoric.jurassic_fossil": "Jurassic Fossil",
+  "item.prehistoric.triassic_fossil": "Triassic Fossil",
+  "item.prehistoric.permian_fossil": "Permian Fossil",
+  "item.prehistoric.carboniferous_fossil": "Carboniferous Fossil",
+  "item.prehistoric.devonian_fossil": "Devonian Fossil",
+  "item.prehistoric.silurian_fossil": "Silurian Fossil",
+  "item.prehistoric.ordovician_fossil": "Ordovician Fossil",
+  "item.prehistoric.cambrian_fossil": "Cambrian Fossil",
+  "item.prehistoric.precambrian_fossil": "Precambrian Fossil"
 }

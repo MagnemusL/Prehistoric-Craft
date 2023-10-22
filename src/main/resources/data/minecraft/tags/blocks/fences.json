@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "prehistoric:archaeopteris_fence"
+    "prehistoric:archaeopteris_fence",
+    "prehistoric:liriodendrites_fence"
   ]
 }

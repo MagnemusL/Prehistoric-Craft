@@ -17,10 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.block.custom.*;
 import net.smazeee.prehistoric.block.custom.machines.AcidShowerBlock;
-import net.smazeee.prehistoric.block.custom.plants.BaieraBlock;
-import net.smazeee.prehistoric.block.custom.plants.CycadeoidaBlock;
-import net.smazeee.prehistoric.block.custom.plants.CycadeoidaGrower;
-import net.smazeee.prehistoric.block.custom.plants.ZingiberopsisBlock;
+import net.smazeee.prehistoric.block.custom.plants.*;
 import net.smazeee.prehistoric.item.ModItems;
 import net.smazeee.prehistoric.world.feature.tree.archaeopteris.ArchaeopterisTreeGrower;
 
@@ -56,9 +53,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> ARCHAEOPTERIS_FENCE_GATE = registerBlock("archaeopteris_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
 
-    public static final RegistryObject<Block> ARCHAEOPTERIS_WALLS = registerBlock("archaeopteris_walls",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-
     public static final RegistryObject<Block> ARCHAEOPTERIS_TRAPDOOR = registerBlock("archaeopteris_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
 
@@ -80,41 +74,8 @@ public class ModBlocks {
                 }
             });
 
-    public static final RegistryObject<Block> ANOMOZAMITES_SHOOT = registerBlock("anomozamites_shoot",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).instabreak()) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;
-                }
-            });
-
     public static final RegistryObject<Block> ARCHAEOPTERIS_SAPLING = registerBlock("archaeopteris_sapling",
           () -> new SaplingBlock(new ArchaeopterisTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
-    public static final RegistryObject<Block> BRASILODENDRON = registerBlock("brasilodendron",
-            () -> new TriplePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
-
-    public static final RegistryObject<Block> BELEMNOPTERIS = registerBlock("belemnopteris",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
-
-    public static final RegistryObject<Block> BAIERA = registerBlock("baiera",
-            () -> new BaieraBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
-
-    public static final RegistryObject<Block> ZINGIBEROPSIS = registerBlock("zingiberopsis",
-            () -> new ZingiberopsisBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
-
-    public static final RegistryObject<Block> BISONIA_NIEMII = registerBlock("bisonia_niemii",
-            () -> new ModDoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
     public static final RegistryObject<Block> ARCHAEOPTERIS_DOOR = registerBlock("archaeopteris_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
@@ -137,6 +98,109 @@ public class ModBlocks {
                 }
             } );
 
+    public static final RegistryObject<Block> LIRIODENDRITES_LOG = registerBlock("liriodendrites_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_WOOD = registerBlock("liriodendrites_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_LIRIODENDRITES_WOOD = registerBlock("stripped_liriodendrites_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_LIRIODENDRITES_LOG = registerBlock("stripped_liriodendrites_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_STAIRS = registerBlock("liriodendrites_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIRIODENDRITES_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_SLAB = registerBlock("liriodendrites_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_FENCE = registerBlock("liriodendrites_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_FENCE_GATE = registerBlock("liriodendrites_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_TRAPDOOR = registerBlock("liriodendrites_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_LEAVES = registerBlock("liriodendrites_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    //public static final RegistryObject<Block> LIRIODENDRITES_SAPLING = registerBlock("liriodendrites_sapling",
+      //      () -> new SaplingBlock(new LiriodendritesTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_DOOR = registerBlock("liriodendrites_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)));
+
+    public static final RegistryObject<Block> LIRIODENDRITES_PLANKS = registerBlock("liriodendrites_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            } );
+
+    public static final RegistryObject<Block> ANOMOZAMITES_SHOOT = registerBlock("anomozamites_shoot",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).instabreak()) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final RegistryObject<Block> BRASILODENDRON = registerBlock("brasilodendron",
+            () -> new TriplePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> BELEMNOPTERIS = registerBlock("belemnopteris",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> BAIERA = registerBlock("baiera",
+            () -> new BaieraBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> ZINGIBEROPSIS = registerBlock("zingiberopsis",
+            () -> new ZingiberopsisBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
+    public static final RegistryObject<Block> BISONIA_NIEMII = registerBlock("bisonia_niemii",
+            () -> new ModDoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
+
     public static final RegistryObject<Block> ACID_SHOWER = registerBlock("acid_shower",
             () -> new AcidShowerBlock(BlockBehaviour.Properties.of(Material.METAL)));
 
@@ -144,10 +208,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
 
     public static final RegistryObject<Block> CONIFER_DIRT = registerBlock("conifer_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(0.5F).sound(SoundType.GRAVEL)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(0.1F).sound(SoundType.GRAVEL)));
 
     public static final RegistryObject<Block> CONIFER_BEDDING = registerBlock("conifer_bedding",
-            () -> new GrassBlock(BlockBehaviour.Properties.of(Material.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS)));
+            () -> new GrassBlock(BlockBehaviour.Properties.of(Material.GRASS).randomTicks().strength(0.1F).sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> LIMESTONE_BRICKS = registerBlock("limestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
@@ -156,13 +220,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()));
 
     public static final RegistryObject<Block> CYCADEOIDA_TRUNK = registerBlock("cycadeoida_trunk",
-            () -> new CycadeoidaBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()));
+            () -> new CycadeoidaBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noOcclusion()));
 
     public static final RegistryObject<Block> CYCADEOIDA_SHOOT = registerBlock("cycadeoida_shoot",
-            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().instabreak()));
+            () -> new CycadeoideaShoot(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS).instabreak()));
 
     public static final RegistryObject<Block> CYCADEOIDA_SAPLING = registerBlock("cycadeoida_sapling",
-            () -> new CycadeoidaGrower(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().instabreak()));
+            () -> new CycadeoidaGrower(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).noOcclusion().instabreak()));
 
     public static final RegistryObject<Block> CRETACEOUS = registerBlock("cretaceous",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));

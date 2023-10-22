@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.smazeee.prehistoric.block.ModBlocks;
+import org.lwjgl.system.CallbackI;
 
 import javax.annotation.Nullable;
 
@@ -45,7 +46,7 @@ public class ModDoublePlantBlock extends BushBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter getter, BlockPos pos) {
-        return state.is(BlockTags.DIRT) || state.is(Blocks.FARMLAND) || state.is(ModBlocks.CONIFER_BEDDING.get()) || state.is(ModBlocks.CONIFER_DIRT.get());
+        return state.is(BlockTags.DIRT) || state.is(Blocks.FARMLAND);
     }
 
     @Nullable
@@ -61,7 +62,13 @@ public class ModDoublePlantBlock extends BushBlock {
     }
 
     public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
-        return true;
+        if (state.getValue(HALF) != DoubleBlockHalf.UPPER) {
+            return super.canSurvive(state, reader, pos);
+        } else {
+            BlockState blockstate = reader.getBlockState(pos.below());
+            if (state.getBlock() != this) return super.canSurvive(state, reader, pos); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
+            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
+        }
     }
 
     public static void placeAt(LevelAccessor accessor, BlockState state, BlockPos pos, int stuff) {

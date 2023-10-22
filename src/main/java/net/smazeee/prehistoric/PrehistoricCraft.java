@@ -14,6 +14,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.block.entity.ModBlockEntities;
+import net.smazeee.prehistoric.entity.ModEntityTypes;
 import net.smazeee.prehistoric.fluids.ModFluids;
 import net.smazeee.prehistoric.item.ModItems;
 import net.smazeee.prehistoric.painting.ModPaintings;
@@ -40,6 +41,7 @@ public class PrehistoricCraft {
         ModFluids.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
 
         ModPaintings.register(modEventBus);
 
@@ -57,6 +59,11 @@ public class PrehistoricCraft {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ARCHAEOPTERIS_TRAPDOOR.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIRIODENDRITES_LEAVES.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIRIODENDRITES_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIRIODENDRITES_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIRIODENDRITES_TRAPDOOR.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDA_SHOOT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDA_SAPLING.get(), RenderType.cutout());

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "prehistoric:block/liriodendrites_planks",
+    "bottom": "prehistoric:block/liriodendrites_planks",
+    "top": "prehistoric:block/liriodendrites_planks"
+  }
+}

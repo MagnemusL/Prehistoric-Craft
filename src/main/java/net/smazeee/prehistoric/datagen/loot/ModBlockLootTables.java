@@ -20,7 +20,6 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_SAPLING.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_FENCE.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_FENCE_GATE.get());
-        this.dropSelf(ModBlocks.ARCHAEOPTERIS_WALLS.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_TRAPDOOR.get());
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_LEAVES.get());
         this.dropSelf(ModBlocks.ANOMOZAMITES_SHOOT.get());
@@ -29,7 +28,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ZINGIBEROPSIS.get());
         this.dropSelf(ModBlocks.BISONIA_NIEMII.get());
         this.dropSelf(ModBlocks.BAIERA.get());
-        this.dropSelf(ModBlocks.ARCHAEOPTERIS_DOOR.get());
+        this.add(ModBlocks.ARCHAEOPTERIS_DOOR.get(), (block ->
+                createDoorTable(ModBlocks.ARCHAEOPTERIS_DOOR.get())));
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_PLANKS.get());
         this.dropSelf(ModBlocks.ACID_SHOWER.get());
         this.dropSelf(ModBlocks.LIMESTONE.get());
@@ -77,6 +77,25 @@ public class ModBlockLootTables extends BlockLoot {
                 (block -> createOreDrop(ModBlocks.PRECAMBRIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
 
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_LOG.get());
+
+
+        this.dropSelf(ModBlocks.LIRIODENDRITES_LOG.get());
+        this.dropSelf(ModBlocks.LIRIODENDRITES_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIRIODENDRITES_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIRIODENDRITES_LOG.get());
+        this.dropSelf(ModBlocks.LIRIODENDRITES_STAIRS.get());
+        //this.dropSelf(ModBlocks.LIRIODENDRITES_SAPLING.get());
+        this.dropSelf(ModBlocks.LIRIODENDRITES_FENCE.get());
+        this.dropSelf(ModBlocks.LIRIODENDRITES_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.LIRIODENDRITES_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.LIRIODENDRITES_LEAVES.get());
+        this.dropSelf(ModBlocks.LIRIODENDRITES_PLANKS.get());
+        this.add(ModBlocks.LIRIODENDRITES_LEAVES.get(), (block) ->
+                createLeavesDrops(block, ModBlocks.STRIPPED_LIRIODENDRITES_LOG.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.add(ModBlocks.LIRIODENDRITES_SLAB.get(), BlockLoot::createSlabItemTable);
+        this.add(ModBlocks.LIRIODENDRITES_DOOR.get(), (block ->
+                createDoorTable(ModBlocks.LIRIODENDRITES_DOOR.get())));
     }
 
     @Override

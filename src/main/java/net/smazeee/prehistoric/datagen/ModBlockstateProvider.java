@@ -59,6 +59,31 @@ public class ModBlockstateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.ARCHAEOPTERIS_SLAB.get(), blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()),
                 blockTexture(ModBlocks.ARCHAEOPTERIS_PLANKS.get()));
         trapdoorBlock((TrapDoorBlock) ModBlocks.ARCHAEOPTERIS_TRAPDOOR.get(), new ResourceLocation(PrehistoricCraft.MOD_ID, "block/archaeopteris_trapdoor"), true);
+
+
+        simpleBlock(ModBlocks.LIRIODENDRITES_PLANKS.get());
+        simpleBlock(ModBlocks.LIRIODENDRITES_LEAVES.get());
+
+        fenceBlock((FenceBlock) ModBlocks.LIRIODENDRITES_FENCE.get(), blockTexture(ModBlocks.LIRIODENDRITES_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIRIODENDRITES_FENCE_GATE.get(), blockTexture(ModBlocks.LIRIODENDRITES_PLANKS.get()));
+
+        logBlock((RotatedPillarBlock) ModBlocks.LIRIODENDRITES_LOG.get());
+
+        doorBlock((DoorBlock) ModBlocks.LIRIODENDRITES_DOOR.get(), new ResourceLocation(PrehistoricCraft.MOD_ID, "block/liriodendrites_door_bottom"),
+                new ResourceLocation(PrehistoricCraft.MOD_ID, "block/liriodendrites_door_top"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.LIRIODENDRITES_WOOD.get(), blockTexture(ModBlocks.LIRIODENDRITES_LOG.get()), blockTexture(ModBlocks.LIRIODENDRITES_LOG.get()));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIRIODENDRITES_LOG.get(), new ResourceLocation(PrehistoricCraft.MOD_ID, "block/stripped_liriodendrites_log"),
+                new ResourceLocation(PrehistoricCraft.MOD_ID, "block/stripped_liriodendrites_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIRIODENDRITES_WOOD.get(), new ResourceLocation(PrehistoricCraft.MOD_ID, "block/stripped_liriodendrites_log"),
+                new ResourceLocation(PrehistoricCraft.MOD_ID, "block/stripped_liriodendrites_log"));
+
+        stairsBlock((StairBlock) ModBlocks.LIRIODENDRITES_STAIRS.get(), blockTexture(ModBlocks.LIRIODENDRITES_PLANKS.get()));
+
+        slabBlock((SlabBlock) ModBlocks.LIRIODENDRITES_SLAB.get(), blockTexture(ModBlocks.LIRIODENDRITES_PLANKS.get()),
+                blockTexture(ModBlocks.LIRIODENDRITES_PLANKS.get()));
+
+        trapdoorBlock((TrapDoorBlock) ModBlocks.LIRIODENDRITES_TRAPDOOR.get(), new ResourceLocation(PrehistoricCraft.MOD_ID, "block/liriodendrites_trapdoor"), true);
     }
 
     public ModelFile flowerPotCross(String name) {

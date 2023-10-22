@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "prehistoric:block/stripped_liriodendrites_log",
+    "end": "prehistoric:block/stripped_liriodendrites_top"
+  }
+}

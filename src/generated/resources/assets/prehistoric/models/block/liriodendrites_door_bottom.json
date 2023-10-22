@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "bottom": "prehistoric:block/liriodendrites_door_bottom",
+    "top": "prehistoric:block/liriodendrites_door_top"
+  }
+}

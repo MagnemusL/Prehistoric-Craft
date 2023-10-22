@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "prehistoric:block/liriodendrites_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "prehistoric:block/liriodendrites_log"
+    },
+    "axis=z": {
+      "model": "prehistoric:block/liriodendrites_log_horizontal",
+      "x": 90
+    }
+  }
+}

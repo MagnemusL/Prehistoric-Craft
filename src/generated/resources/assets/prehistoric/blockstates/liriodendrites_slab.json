@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "prehistoric:block/liriodendrites_slab_top"
+    },
+    "type=bottom": {
+      "model": "prehistoric:block/liriodendrites_slab"
+    },
+    "type=double": {
+      "model": "prehistoric:block/liriodendrites_planks"
+    }
+  }
+}

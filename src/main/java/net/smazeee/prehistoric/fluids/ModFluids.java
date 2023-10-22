@@ -33,10 +33,10 @@ public class ModFluids {
             = FLUIDS.register("mud_water_flowing", () -> new ForgeFlowingFluid.Flowing(ModFluids.MUD_WATER_PROPERTIES));
 
     public static final RegistryObject<FlowingFluid> ACID_FLUID
-            = FLUIDS.register("acid_fluid", () -> new ForgeFlowingFluid.Source(ModFluids.MUD_WATER_PROPERTIES));
+            = FLUIDS.register("acid_fluid", () -> new ForgeFlowingFluid.Source(ModFluids.ACID_PROPERTIES));
 
     public static final RegistryObject<FlowingFluid> ACID_FLOWING
-            = FLUIDS.register("acid_flowing", () -> new ForgeFlowingFluid.Flowing(ModFluids.MUD_WATER_PROPERTIES));
+            = FLUIDS.register("acid_flowing", () -> new ForgeFlowingFluid.Flowing(ModFluids.ACID_PROPERTIES));
 
 
 
@@ -48,7 +48,7 @@ public class ModFluids {
 
     public static final ForgeFlowingFluid.Properties ACID_PROPERTIES = new ForgeFlowingFluid.Properties(
             () -> ACID_FLUID.get(), () -> ACID_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
-            .density(15).luminosity(2).viscosity(5).sound(SoundEvents.WATER_AMBIENT).overlay(WATER_OVERLAY_RL)
+            .density(15).luminosity(2).viscosity(5).sound(SoundEvents.WATER_AMBIENT).overlay(WATER_OVERLAY_RL).temperature(3)
             .color(0xEBFF7E)).slopeFindDistance(4).levelDecreasePerBlock(2)
             .block(() -> ModFluids.ACID_BLOCK.get()).bucket(() -> ModItems.ACID_BUCKET.get());
 

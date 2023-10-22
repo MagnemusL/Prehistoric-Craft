@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#prehistoric:archaeopteris_logs"
+    "prehistoric:archaeopteris_logs",
+    "prehistoric:liriodendrites_logs"
   ]
 }

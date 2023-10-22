@@ -7,6 +7,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.smazeee.prehistoric.block.ModBlocks;
 
 import java.util.Random;
@@ -14,6 +16,13 @@ import java.util.Random;
 public class CycadeoidaGrower extends Block implements BonemealableBlock {
     public CycadeoidaGrower(Properties properties) {
         super(properties);
+    }
+
+    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 0, 0, 0);
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+        return SHAPE;
     }
 
     public void grow(Level level, BlockPos pos) {
