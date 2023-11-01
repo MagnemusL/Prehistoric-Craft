@@ -10,6 +10,7 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
@@ -51,9 +52,10 @@ public class Cryolophosaurus extends Dinosaur implements IAnimatable {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.10D, true));
         this.goalSelector.addGoal(2, new DinoSleepGoal(this));
-        this.goalSelector.addGoal(5, new DinoLookAtPlayerGoal(this));
-        this.goalSelector.addGoal(6, new DinoLookAroundGoal(this));
+        this.goalSelector.addGoal(3, new DinoLookAtPlayerGoal(this));
+        this.goalSelector.addGoal(5, new DinoLookAroundGoal(this));
 
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, true));
@@ -85,18 +87,21 @@ public class Cryolophosaurus extends Dinosaur implements IAnimatable {
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_CALLING, false);
+        this.entityData.define(DATA_PACK, false);
     }
 
     @Override
     public void addAdditionalSaveData(CompoundTag nbt) {
         super.addAdditionalSaveData(nbt);
         nbt.putBoolean("calling", this.isCalling());
+        nbt.putBoolean("pack", this.hasPack());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag nbt) {
         super.readAdditionalSaveData(nbt);
-        this.setSleeping(nbt.getBoolean("calling"));
+        this.setCalling(nbt.getBoolean("calling"));
+        this.setPack(nbt.getBoolean("pack"));
     }
 
     @Override
@@ -172,7 +177,7 @@ public class Cryolophosaurus extends Dinosaur implements IAnimatable {
 
     protected static final AnimationBuilder IDLE = new AnimationBuilder().addAnimation("idle", EDefaultLoopTypes.LOOP);
     protected static final AnimationBuilder WALK = new AnimationBuilder().addAnimation("walk", EDefaultLoopTypes.LOOP);
-    protected static final AnimationBuilder SLEEP = new AnimationBuilder().addAnimation("sleep", EDefaultLoopTypes.LOOP);
+    protected static final AnimationBuilder SLEEP = new AnimationBuilder().addAnimation("rest", EDefaultLoopTypes.LOOP);
     protected static final AnimationBuilder BITE = new AnimationBuilder().addAnimation("bite", EDefaultLoopTypes.PLAY_ONCE);
     protected static final AnimationBuilder RUN = new AnimationBuilder().addAnimation("run", EDefaultLoopTypes.LOOP);
     protected static final AnimationBuilder CALL = new AnimationBuilder().addAnimation("call", EDefaultLoopTypes.LOOP);

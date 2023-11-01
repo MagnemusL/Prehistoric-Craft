@@ -16,7 +16,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<Cryolophosaurus>> CRYOLOPHOSAURUS =
             ENTITY_TYPES.register("cryolophosaurus",
                     () -> EntityType.Builder.of(Cryolophosaurus::new, MobCategory.MONSTER)
-                            .sized(0.4F, 1.5F)
+                            .sized(1.5f, 2f)
                             .build(new ResourceLocation(PrehistoricCraft.MOD_ID, "cryolophosaurus").toString()));
 
     public static void register(IEventBus eventBus) {

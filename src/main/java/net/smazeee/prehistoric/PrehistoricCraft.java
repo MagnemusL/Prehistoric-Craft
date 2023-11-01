@@ -3,6 +3,7 @@ package net.smazeee.prehistoric;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -14,13 +15,19 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.smazeee.prehistoric.block.ModBlocks;
 import net.smazeee.prehistoric.block.entity.ModBlockEntities;
+import net.smazeee.prehistoric.config.ModCommonConfig;
 import net.smazeee.prehistoric.entity.ModEntityTypes;
+import net.smazeee.prehistoric.entity.client.CryolophosaurusRenderer;
 import net.smazeee.prehistoric.fluids.ModFluids;
 import net.smazeee.prehistoric.item.ModItems;
 import net.smazeee.prehistoric.painting.ModPaintings;
 import net.smazeee.prehistoric.recipe.ModRecipes;
 import net.smazeee.prehistoric.screen.AcidShowerScreen;
 import net.smazeee.prehistoric.screen.ModMenuTypes;
+import net.smazeee.prehistoric.world.ModWorldEvents;
+import net.smazeee.prehistoric.world.feature.ModConfiguredFeatures;
+import net.smazeee.prehistoric.world.feature.ModPlacedFeatures;
+import net.smazeee.prehistoric.world.gen.ModOreGeneration;
 import net.smazeee.prehistoric.world.structures.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -46,6 +53,8 @@ public class PrehistoricCraft {
         ModPaintings.register(modEventBus);
 
         ModRecipes.register(modEventBus);
+
+        ModPlacedFeatures.register(modEventBus);
 
         //ModBlockStateProperties.register(modEventBus);
 
@@ -78,6 +87,7 @@ public class PrehistoricCraft {
         ItemBlockRenderTypes.setRenderLayer(ModFluids.MUD_WATER_FLOWING.get(), RenderType.translucent());
 
         MenuScreens.register(ModMenuTypes.ACID_SHOWER_MENU.get(), AcidShowerScreen::new);
+        EntityRenderers.register(ModEntityTypes.CRYOLOPHOSAURUS.get(), CryolophosaurusRenderer::new);
     }
 
     @SubscribeEvent

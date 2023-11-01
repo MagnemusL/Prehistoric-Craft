@@ -94,18 +94,27 @@ public class Dinosaur extends TamableAnimal {
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_SLEEPING, false);
+        this.entityData.define(DATA_EATING, false);
+        this.entityData.define(DATA_DRINKING, false);
+        this.entityData.define(DATA_CLEANING, false);
     }
 
     @Override
     public void addAdditionalSaveData(CompoundTag nbt) {
         super.addAdditionalSaveData(nbt);
         nbt.putBoolean("sleeping", this.isSleeping());
+        nbt.putBoolean("eating", this.isEating());
+        nbt.putBoolean("drinking", this.isDrinking());
+        nbt.putBoolean("cleaning", this.isCleaning());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag nbt) {
         super.readAdditionalSaveData(nbt);
         this.setSleeping(nbt.getBoolean("sleeping"));
+        this.setEating(nbt.getBoolean("eating"));
+        this.setDrinking(nbt.getBoolean("drinking"));
+        this.setCleaning(nbt.getBoolean("cleaning"));
     }
 
     @Override
