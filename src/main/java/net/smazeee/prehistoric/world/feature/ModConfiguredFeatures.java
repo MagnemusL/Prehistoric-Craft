@@ -42,8 +42,8 @@ public class ModConfiguredFeatures {
                             0.5F)), ARCHAEOPTERIS_TREE));
 
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_FOSSIL_ORES = List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.PRECAMBRIAN.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.CAMBRIAN.get().defaultBlockState()));
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.PRECAMBRIAN_FOSSIL_BLOCK.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.CAMBRIAN_FOSSIL_BLOCK.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> CAMBRIAN_ORE = FeatureUtils.register("cambrian_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, ModCommonConfig.CAMBRIAN_ORE_VEIN_SIZE.get()));

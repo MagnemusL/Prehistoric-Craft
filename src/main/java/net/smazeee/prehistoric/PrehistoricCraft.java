@@ -54,8 +54,6 @@ public class PrehistoricCraft {
 
         ModRecipes.register(modEventBus);
 
-        ModPlacedFeatures.register(modEventBus);
-
         //ModBlockStateProperties.register(modEventBus);
 
         modEventBus.addListener(this::setup);
@@ -87,7 +85,7 @@ public class PrehistoricCraft {
         ItemBlockRenderTypes.setRenderLayer(ModFluids.MUD_WATER_FLOWING.get(), RenderType.translucent());
 
         MenuScreens.register(ModMenuTypes.ACID_SHOWER_MENU.get(), AcidShowerScreen::new);
-        EntityRenderers.register(ModEntityTypes.CRYOLOPHOSAURUS.get(), CryolophosaurusRenderer::new);
+        //EntityRenderers.register(ModEntityTypes.CRYOLOPHOSAURUS.get(), CryolophosaurusRenderer::new);
     }
 
     @SubscribeEvent

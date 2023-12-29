@@ -46,35 +46,35 @@ public class ModBlockLootTables extends BlockLoot {
 
         this.add(ModBlocks.ARCHAEOPTERIS_SLAB.get(), BlockLoot::createSlabItemTable);
 
-        this.add(ModBlocks.CRETACEOUS.get(),
-                (block -> createOreDrop(ModBlocks.CRETACEOUS.get(), ModItems.CRETACEOUS_FOSSIL.get())));
+        this.add(ModBlocks.CRETACEOUS_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.CRETACEOUS_FOSSIL_BLOCK.get(), ModItems.CRETACEOUS_FOSSIL.get())));
 
-        this.add(ModBlocks.JURASSIC.get(),
-                (block -> createOreDrop(ModBlocks.JURASSIC.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.JURASSIC_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.JURASSIC_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.TRIASSIC.get(),
-                (block -> createOreDrop(ModBlocks.JURASSIC.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.TRIASSIC_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.JURASSIC_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.PERMIAN.get(),
-                (block -> createOreDrop(ModBlocks.PERMIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.PERMIAN_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.PERMIAN_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.CARBONIFEROUS.get(),
-                (block -> createOreDrop(ModBlocks.CARBONIFEROUS.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.CARBONIFEROUS_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.CARBONIFEROUS_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.DEVONIAN.get(),
-                (block -> createOreDrop(ModBlocks.DEVONIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.DEVONIAN_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.DEVONIAN_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.SILURIAN.get(),
-                (block -> createOreDrop(ModBlocks.SILURIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.SILURIAN_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.SILURIAN_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.ORDOVICIAN.get(),
-                (block -> createOreDrop(ModBlocks.ORDOVICIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.ORDOVICIAN_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.ORDOVICIAN_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.CAMBRIAN.get(),
-                (block -> createOreDrop(ModBlocks.CAMBRIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.CAMBRIAN_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.CAMBRIAN_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
-        this.add(ModBlocks.PRECAMBRIAN.get(),
-                (block -> createOreDrop(ModBlocks.PRECAMBRIAN.get(), ModItems.JURASSIC_FOSSIL.get())));
+        this.add(ModBlocks.PRECAMBRIAN_FOSSIL_BLOCK.get(),
+                (block -> createOreDrop(ModBlocks.PRECAMBRIAN_FOSSIL_BLOCK.get(), ModItems.JURASSIC_FOSSIL.get())));
 
         this.dropSelf(ModBlocks.ARCHAEOPTERIS_LOG.get());
 

@@ -27,7 +27,7 @@ public class ModEvents {
 
         @SubscribeEvent
         public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-            event.put(ModEntityTypes.CRYOLOPHOSAURUS.get(), Cryolophosaurus.createAttributes().build());
+            //event.put(ModEntityTypes.CRYOLOPHOSAURUS.get(), Cryolophosaurus.createAttributes().build());
         }
     }
 }

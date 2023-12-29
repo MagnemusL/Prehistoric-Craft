@@ -29,16 +29,16 @@ public class ModBlockstateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.LIMESTONE.get());
         simpleBlock(ModBlocks.LIMESTONE_BRICKS.get());
         simpleBlock(ModBlocks.CONIFER_DIRT.get());
-        simpleBlock(ModBlocks.CRETACEOUS.get());
-        simpleBlock(ModBlocks.JURASSIC.get());
-        simpleBlock(ModBlocks.TRIASSIC.get());
-        simpleBlock(ModBlocks.PERMIAN.get());
-        simpleBlock(ModBlocks.CARBONIFEROUS.get());
-        simpleBlock(ModBlocks.DEVONIAN.get());
-        simpleBlock(ModBlocks.SILURIAN.get());
-        simpleBlock(ModBlocks.ORDOVICIAN.get());
-        simpleBlock(ModBlocks.CAMBRIAN.get());
-        simpleBlock(ModBlocks.PRECAMBRIAN.get());
+        simpleBlock(ModBlocks.CRETACEOUS_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.JURASSIC_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.TRIASSIC_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.PERMIAN_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.CARBONIFEROUS_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.DEVONIAN_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.SILURIAN_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.ORDOVICIAN_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.CAMBRIAN_FOSSIL_BLOCK.get());
+        simpleBlock(ModBlocks.PRECAMBRIAN_FOSSIL_BLOCK.get());
 
         //buttonBlock((ButtonBlock) ModBlocks.hhs.get(), blockTexture(ModBlocks.dfgf.get()));
         //pressurePlateBlock((PressurePlateBlock) ModBlocks.hhs.get(), blockTexture(ModBlocks.dfgf.get()));

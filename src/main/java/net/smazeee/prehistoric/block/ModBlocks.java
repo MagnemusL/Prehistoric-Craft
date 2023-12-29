@@ -27,7 +27,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricCraft.MOD_ID);
 
-
     public static final RegistryObject<Block> ARCHAEOPTERIS_LOG = registerBlock("archaeopteris_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
@@ -228,34 +227,34 @@ public class ModBlocks {
     public static final RegistryObject<Block> CYCADEOIDA_SAPLING = registerBlock("cycadeoida_sapling",
             () -> new CycadeoidaGrower(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).noOcclusion().instabreak()));
 
-    public static final RegistryObject<Block> CRETACEOUS = registerBlock("cretaceous",
+    public static final RegistryObject<Block> CRETACEOUS_FOSSIL_BLOCK = registerBlock("cretaceous_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> JURASSIC = registerBlock("jurassic",
+    public static final RegistryObject<Block> JURASSIC_FOSSIL_BLOCK = registerBlock("jurassic_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> TRIASSIC = registerBlock("triassic",
+    public static final RegistryObject<Block> TRIASSIC_FOSSIL_BLOCK = registerBlock("triassic_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> PERMIAN = registerBlock("permian",
+    public static final RegistryObject<Block> PERMIAN_FOSSIL_BLOCK = registerBlock("permian_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> CARBONIFEROUS = registerBlock("carboniferous",
+    public static final RegistryObject<Block> CARBONIFEROUS_FOSSIL_BLOCK = registerBlock("carboniferous_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> DEVONIAN = registerBlock("devonian",
+    public static final RegistryObject<Block> DEVONIAN_FOSSIL_BLOCK = registerBlock("devonian_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> SILURIAN = registerBlock("silurian",
+    public static final RegistryObject<Block> SILURIAN_FOSSIL_BLOCK = registerBlock("silurian_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> ORDOVICIAN = registerBlock("ordovician",
+    public static final RegistryObject<Block> ORDOVICIAN_FOSSIL_BLOCK = registerBlock("ordovician_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> CAMBRIAN = registerBlock("cambrian",
+    public static final RegistryObject<Block> CAMBRIAN_FOSSIL_BLOCK = registerBlock("cambrian_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
-    public static final RegistryObject<Block> PRECAMBRIAN = registerBlock("precambrian",
+    public static final RegistryObject<Block> PRECAMBRIAN_FOSSIL_BLOCK = registerBlock("precambrian_fossil_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
 

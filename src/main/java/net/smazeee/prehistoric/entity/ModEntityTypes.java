@@ -13,11 +13,13 @@ public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITIES, PrehistoricCraft.MOD_ID);
 
-    public static final RegistryObject<EntityType<Cryolophosaurus>> CRYOLOPHOSAURUS =
+    /*public static final RegistryObject<EntityType<Cryolophosaurus>> CRYOLOPHOSAURUS =
             ENTITY_TYPES.register("cryolophosaurus",
                     () -> EntityType.Builder.of(Cryolophosaurus::new, MobCategory.MONSTER)
                             .sized(1.5f, 2f)
                             .build(new ResourceLocation(PrehistoricCraft.MOD_ID, "cryolophosaurus").toString()));
+
+     */
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
