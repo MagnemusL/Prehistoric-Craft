@@ -13,10 +13,11 @@ import net.smazeee.prehistoric.PrehistoricCraft;
 import net.smazeee.prehistoric.block.ModBlocks;
 import org.jetbrains.annotations.Nullable;
 
+
 import java.util.Random;
 
-public class CycadeoidaBlock extends Block implements BonemealableBlock {
-    public CycadeoidaBlock(Properties properties) {
+public class CycadeoideaBlock extends Block implements BonemealableBlock {
+    public CycadeoideaBlock(Properties properties) {
         super(properties);
     }
 
@@ -27,7 +28,7 @@ public class CycadeoidaBlock extends Block implements BonemealableBlock {
         long time = level.getGameTime();
         if (!level.isAreaLoaded(pos, 1)) return;
 
-        if(time == 1000 && level.getBlockState(pos.above()) == ModBlocks.CYCADEOIDA_SHOOT.get().defaultBlockState()) {
+        if(time == 1000 && level.getBlockState(pos.above()) == ModBlocks.CYCADEOIDEA_SHOOT.get().defaultBlockState()) {
             level.setBlock(pos, state.setValue(FLOWERING, true), 3);
             PrehistoricCraft.LOGGER.debug("The time at 1000 is: " + time);
         }
@@ -59,7 +60,7 @@ public class CycadeoidaBlock extends Block implements BonemealableBlock {
 
     @Override
     public void performBonemeal(ServerLevel level, Random random, BlockPos pos, BlockState state) {
-        if(level.getBlockState(pos.above()) == ModBlocks.CYCADEOIDA_SHOOT.get().defaultBlockState()) {
+        if(level.getBlockState(pos.above()) == ModBlocks.CYCADEOIDEA_SHOOT.get().defaultBlockState()) {
             level.setBlock(pos, state.setValue(FLOWERING, true), 3);
         }
     }

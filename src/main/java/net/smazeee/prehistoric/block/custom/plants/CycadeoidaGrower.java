@@ -26,8 +26,8 @@ public class CycadeoidaGrower extends Block implements BonemealableBlock {
     }
 
     public void grow(Level level, BlockPos pos) {
-        level.setBlockAndUpdate(pos, ModBlocks.CYCADEOIDA_TRUNK.get().defaultBlockState().setValue(CycadeoidaBlock.FLOWERING, false));
-        level.setBlockAndUpdate(pos.above(), ModBlocks.CYCADEOIDA_SHOOT.get().defaultBlockState());
+        level.setBlockAndUpdate(pos, ModBlocks.CYCADEOIDEA_TRUNK.get().defaultBlockState().setValue(CycadeoideaBlock.FLOWERING, false));
+        level.setBlockAndUpdate(pos.above(), ModBlocks.CYCADEOIDEA_SHOOT.get().defaultBlockState());
     }
 
     private int time = 0;

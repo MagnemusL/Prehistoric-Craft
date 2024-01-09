@@ -34,9 +34,9 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ACID_SHOWER.get());
         this.dropSelf(ModBlocks.LIMESTONE.get());
         this.dropSelf(ModBlocks.CONIFER_DIRT.get());
-        this.dropSelf(ModBlocks.CYCADEOIDA_TRUNK.get());
-        this.dropSelf(ModBlocks.CYCADEOIDA_SHOOT.get());
-        this.dropSelf(ModBlocks.CYCADEOIDA_SAPLING.get());
+        this.dropSelf(ModBlocks.CYCADEOIDEA_TRUNK.get());
+        this.dropSelf(ModBlocks.CYCADEOIDEA_SHOOT.get());
+        this.dropSelf(ModBlocks.CYCADEOIDEA_SAPLING.get());
         this.dropSelf(ModBlocks.BJUVIA_TRUNK.get());
         this.add(ModBlocks.CONIFER_BEDDING.get(), (block) -> createSingleItemTableWithSilkTouch(block, ModBlocks.CONIFER_DIRT.get()));
 

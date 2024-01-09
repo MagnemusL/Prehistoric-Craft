@@ -29,12 +29,12 @@ displayName="Prehistoric Craft" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="prehistoric.png" #optional
 # A text field displayed in the mod UI
-credits="Smazeee" #optional
+credits="Seentro, Magne, Gibbly, Elyasisly, Dilo, Swis, Tomato" #optional
 # A text field displayed in the mod UI
-authors="Smazeee" #optional
+authors="Rexy" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-A Mod.
+A Mod About all things prehistoric, and more.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.prehistoric]] #optional
