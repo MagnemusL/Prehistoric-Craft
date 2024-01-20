@@ -188,6 +188,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BRASILODENDRON = registerBlock("brasilodendron",
             () -> new TriplePlantBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
+    public static final RegistryObject<Block> RED_LAVA_ROCK = registerBlock("red_lava_rock",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
     public static final RegistryObject<Block> BELEMNOPTERIS = registerBlock("belemnopteris",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.LARGE_FERN).instabreak()));
 
@@ -218,13 +221,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> BJUVIA_TRUNK = registerBlock("bjuvia_trunk",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion()));
 
-    public static final RegistryObject<Block> CYCADEOIDA_TRUNK = registerBlock("cycadeoida_trunk",
-            () -> new CycadeoidaBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> CYCADEOIDEA_TRUNK = registerBlock("cycadeoidea_trunk",
+            () -> new CycadeoideaBlock(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noOcclusion()));
 
-    public static final RegistryObject<Block> CYCADEOIDA_SHOOT = registerBlock("cycadeoida_shoot",
+    public static final RegistryObject<Block> CYCADEOIDEA_SHOOT = registerBlock("cycadeoidea_shoot",
             () -> new CycadeoideaShoot(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS).instabreak()));
 
-    public static final RegistryObject<Block> CYCADEOIDA_SAPLING = registerBlock("cycadeoida_sapling",
+    public static final RegistryObject<Block> CYCADEOIDEA_SAPLING = registerBlock("cycadeoida_sapling",
             () -> new CycadeoidaGrower(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).noOcclusion().instabreak()));
 
     public static final RegistryObject<Block> CRETACEOUS_FOSSIL_BLOCK = registerBlock("cretaceous_fossil_block",
@@ -234,28 +237,28 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static final RegistryObject<Block> TRIASSIC_FOSSIL_BLOCK = registerBlock("triassic_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
 
     public static final RegistryObject<Block> PERMIAN_FOSSIL_BLOCK = registerBlock("permian_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
 
     public static final RegistryObject<Block> CARBONIFEROUS_FOSSIL_BLOCK = registerBlock("carboniferous_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
 
     public static final RegistryObject<Block> DEVONIAN_FOSSIL_BLOCK = registerBlock("devonian_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
 
     public static final RegistryObject<Block> SILURIAN_FOSSIL_BLOCK = registerBlock("silurian_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
 
     public static final RegistryObject<Block> ORDOVICIAN_FOSSIL_BLOCK = registerBlock("ordovician_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
 
     public static final RegistryObject<Block> CAMBRIAN_FOSSIL_BLOCK = registerBlock("cambrian_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
 
     public static final RegistryObject<Block> PRECAMBRIAN_FOSSIL_BLOCK = registerBlock("precambrian_fossil_block",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
 
 
     private static <T extends Block> RegistryObject<T> registerOre(String name, Supplier<T> block) {

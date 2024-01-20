@@ -17,12 +17,12 @@ public class CycadeoideaShoot extends BushBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter getter, BlockPos pos) {
-        return state.is(ModBlocks.CYCADEOIDA_TRUNK.get());
+        return state.is(ModBlocks.CYCADEOIDEA_TRUNK.get());
     }
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
         BlockState blockState = reader.getBlockState(pos.below());
-        return blockState == ModBlocks.CYCADEOIDA_TRUNK.get().defaultBlockState();
+        return blockState == ModBlocks.CYCADEOIDEA_TRUNK.get().defaultBlockState();
     }
 }

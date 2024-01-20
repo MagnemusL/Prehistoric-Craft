@@ -65,8 +65,8 @@ public class PrehistoricCraft {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIRIODENDRITES_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIRIODENDRITES_TRAPDOOR.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDA_SHOOT.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDA_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDEA_SHOOT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYCADEOIDEA_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BELEMNOPTERIS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRASILODENDRON.get(), RenderType.cutout());

@@ -11,9 +11,8 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.smazeee.prehistoric.block.ModBlocks;
-import net.smazeee.prehistoric.block.custom.plants.CycadeoidaBlock;
+import net.smazeee.prehistoric.block.custom.plants.CycadeoideaBlock;
 import net.smazeee.prehistoric.item.ModItems;
-import org.lwjgl.system.CallbackI;
 
 import java.util.Random;
 
@@ -40,8 +39,8 @@ public class JarItem extends Item {
                 itemStack.shrink(1);
                 return InteractionResult.SUCCESS;
             }
-            if (level.getBlockState(pos).is(ModBlocks.CYCADEOIDA_TRUNK.get()) && level.getBlockState(pos).getValue(CycadeoidaBlock.FLOWERING)) {
-                level.setBlock(pos, level.getBlockState(pos).setValue(CycadeoidaBlock.FLOWERING, false), 1);
+            if (level.getBlockState(pos).is(ModBlocks.CYCADEOIDEA_TRUNK.get()) && level.getBlockState(pos).getValue(CycadeoideaBlock.FLOWERING)) {
+                level.setBlock(pos, level.getBlockState(pos).setValue(CycadeoideaBlock.FLOWERING, false), 1);
                 player.getInventory().add(new ItemStack(ModItems.CYCADEOIDA_SPORE_JAR.get()));
                 itemStack.shrink(1);
                 return InteractionResult.SUCCESS;
@@ -65,7 +64,7 @@ public class JarItem extends Item {
         if (this == ModItems.CYCADEOIDA_SPORE_JAR.get()) {
             if (level.getBlockState(pos).is(Blocks.GRASS_BLOCK)) {
                 if (context.getClickedFace() == Direction.UP) {
-                    level.setBlock(pos.above(), ModBlocks.CYCADEOIDA_SAPLING.get().defaultBlockState(), 1);
+                    level.setBlock(pos.above(), ModBlocks.CYCADEOIDEA_SAPLING.get().defaultBlockState(), 1);
                     if (new ItemStack(ModItems.CYCADEOIDA_SPORE_JAR.get()).getCount() == 1) {
                         player.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(ModItems.EMPTY_JAR.get()));
                     } else {
