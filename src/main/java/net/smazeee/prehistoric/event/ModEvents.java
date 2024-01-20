@@ -7,8 +7,6 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.smazeee.prehistoric.PrehistoricCraft;
-import net.smazeee.prehistoric.entity.Cryolophosaurus;
-import net.smazeee.prehistoric.entity.ModEntityTypes;
 import net.smazeee.prehistoric.recipe.AcidShowerRecipe;
 
 public class ModEvents {

@@ -26,38 +26,42 @@ public class Dinosaur extends TamableAnimal {
     private static final EntityDataAccessor<Boolean> DATA_DRINKING = SynchedEntityData.defineId(Dinosaur.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> DATA_CLEANING = SynchedEntityData.defineId(Dinosaur.class, EntityDataSerializers.BOOLEAN);
 
+    private static final EntityDataAccessor<Boolean> DATA_IN_PACK = SynchedEntityData.defineId(Dinosaur.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<Integer> DATA_PACK_NUMBER = SynchedEntityData.defineId(Dinosaur.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Boolean> DATA_PACK_LEADER = SynchedEntityData.defineId(Dinosaur.class, EntityDataSerializers.BOOLEAN);
+
     public Dinosaur(EntityType<? extends TamableAnimal> entityType, Level level) {
         super(entityType, level);
     }
 
+    public int getPackNumber() {
+        return this.entityData.get(DATA_PACK_NUMBER);
+    }
     public int getFood() {
         return this.entityData.get(DATA_FOOD);
     }
-
     public int getWater() {
         return this.entityData.get(DATA_WATER);
     }
-
     public int getCleanliness() {
         return this.entityData.get(DATA_CLEANLINESS);
     }
-
     public int getNutrition() {
         return this.entityData.get(DATA_NUTRITION);
     }
 
+    public void setPackNumber(int packNumber) {
+        this.entityData.set(DATA_PACK_NUMBER,packNumber);
+    }
     public void setFood(int food) {
         this.entityData.set(DATA_FOOD, food);
     }
-
     public void setWater(int water) {
         this.entityData.set(DATA_WATER, water);
     }
-
     public void setCleanliness(int cleanliness) {
         this.entityData.set(DATA_CLEANLINESS, cleanliness);
     }
-
     public void setNutrition(int nutrition) {
         this.entityData.set(DATA_NUTRITION, nutrition);
     }
@@ -68,10 +72,25 @@ public class Dinosaur extends TamableAnimal {
     public boolean isDrinking() {
         return this.entityData.get(DATA_DRINKING);
     }
+    public boolean isInPack() {
+        return this.entityData.get(DATA_IN_PACK);
+    }
+    public boolean isPackLeader() {
+        return this.entityData.get(DATA_PACK_LEADER);
+    }
     public boolean isCleaning() {
         return this.entityData.get(DATA_CLEANING);
     }
+    public boolean isSleeping() {
+        return this.entityData.get(DATA_SLEEPING);
+    }
 
+    public void setInPack(boolean inPack) {
+        this.entityData.set(DATA_IN_PACK, inPack);
+    }
+    public void setPackLeader(boolean packLeader) {
+        this.entityData.set(DATA_PACK_LEADER, packLeader);
+    }
     public void setEating(boolean eating) {
         this.entityData.set(DATA_EATING, eating);
     }
@@ -81,11 +100,6 @@ public class Dinosaur extends TamableAnimal {
     public void setCleaning(boolean cleaning) {
         this.entityData.set(DATA_CLEANING, cleaning);
     }
-
-    public boolean isSleeping() {
-        return this.entityData.get(DATA_SLEEPING);
-    }
-
     public void setSleeping(boolean sleeping) {
         this.entityData.set(DATA_SLEEPING, sleeping);
     }
@@ -97,6 +111,8 @@ public class Dinosaur extends TamableAnimal {
         this.entityData.define(DATA_EATING, false);
         this.entityData.define(DATA_DRINKING, false);
         this.entityData.define(DATA_CLEANING, false);
+        this.entityData.define(DATA_IN_PACK, false);
+        this.entityData.define(DATA_PACK_LEADER, false);
     }
 
     @Override
@@ -106,6 +122,8 @@ public class Dinosaur extends TamableAnimal {
         nbt.putBoolean("eating", this.isEating());
         nbt.putBoolean("drinking", this.isDrinking());
         nbt.putBoolean("cleaning", this.isCleaning());
+        nbt.putBoolean("in_pack", this.isInPack());
+        nbt.putBoolean("is_leader", this.isPackLeader());
     }
 
     @Override
@@ -115,6 +133,8 @@ public class Dinosaur extends TamableAnimal {
         this.setEating(nbt.getBoolean("eating"));
         this.setDrinking(nbt.getBoolean("drinking"));
         this.setCleaning(nbt.getBoolean("cleaning"));
+        this.setInPack(nbt.getBoolean("in_pack"));
+        this.setPackLeader(nbt.getBoolean("is_leader"));
     }
 
     @Override
